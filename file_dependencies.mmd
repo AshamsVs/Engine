@@ -1,0 +1,7 @@
+flowchart TD
+    combine_data.py --> analyze_project.py
+    combine_data.py --> extract_commit_changes.py
+    detect_changed_functions.py --> function_ranges.py
+    detect_changed_functions.py --> parse_diff.py
+    extract_commit_changes.py --> detect_changed_functions.py
+    extract_commit_changes.py --> function_ranges.py

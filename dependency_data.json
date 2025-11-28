@@ -1,0 +1,86 @@
+{
+  "files": {
+    ".\\analyze_project.py": [],
+    ".\\combine_data.py": [
+      ".\\analyze_project.py",
+      ".\\extract_commit_changes.py"
+    ],
+    ".\\demo.py": [],
+    ".\\dependency_graph.py": [],
+    ".\\detect_changed_functions.py": [
+      ".\\function_ranges.py",
+      ".\\parse_diff.py"
+    ],
+    ".\\example.py": [],
+    ".\\extract_commit_changes.py": [
+      ".\\detect_changed_functions.py",
+      ".\\function_ranges.py"
+    ],
+    ".\\function_call_graph.py": [],
+    ".\\function_ranges.py": [],
+    ".\\generate_docs.py": [],
+    ".\\parse_diff.py": [],
+    ".\\read_commits.py": []
+  },
+  "functions": {
+    "get_python_files": [],
+    "analyze_file": [],
+    "analyze_project": [
+      "get_python_files",
+      "analyze_file"
+    ],
+    "generate_markdown": [],
+    "build_index_by_file": [],
+    "attach_commit_changes": [],
+    "combine": [
+      "analyze_project",
+      "extract_commit_changes",
+      "build_index_by_file",
+      "attach_commit_changes"
+    ],
+    "greet": [],
+    "farewell": [],
+    "get_module_name": [],
+    "build_module_to_file_map": [
+      "get_python_files",
+      "get_module_name"
+    ],
+    "analyze_imports": [],
+    "build_file_dependency_graph": [
+      "build_module_to_file_map",
+      "get_python_files",
+      "analyze_imports"
+    ],
+    "extract_defined_functions": [],
+    "extract_calls": [],
+    "build_filtered_call_graph": [
+      "get_python_files",
+      "extract_defined_functions",
+      "extract_calls"
+    ],
+    "build_dependency_data": [
+      "build_file_dependency_graph",
+      "build_filtered_call_graph"
+    ],
+    "detect_changed_functions": [
+      "get_function_ranges",
+      "get_changed_lines"
+    ],
+    "extract_commit_changes": [
+      "detect_changed_functions"
+    ],
+    "get_function_ranges": [],
+    "load_json": [],
+    "load_template": [],
+    "build_prompt": [],
+    "simulate_llm": [],
+    "main": [
+      "load_json",
+      "load_template",
+      "build_prompt",
+      "simulate_llm",
+      "simulate_llm"
+    ],
+    "get_changed_lines": []
+  }
+}

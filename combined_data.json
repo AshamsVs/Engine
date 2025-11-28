@@ -1,0 +1,300 @@
+{
+  "project": {
+    "name": "Engine",
+    "root_path": "C:\\Users\\91773\\OneDrive\\Desktop\\Engine"
+  },
+  "files": [
+    {
+      "path": "analyze_project.py",
+      "functions": [
+        {
+          "name": "get_python_files",
+          "args": [
+            "folder_path"
+          ],
+          "doc": null
+        },
+        {
+          "name": "analyze_file",
+          "args": [
+            "file_path"
+          ],
+          "doc": null
+        },
+        {
+          "name": "analyze_project",
+          "args": [
+            "folder_path"
+          ],
+          "doc": null
+        },
+        {
+          "name": "generate_markdown",
+          "args": [
+            "project_data",
+            "output_file"
+          ],
+          "doc": null
+        }
+      ],
+      "classes": [],
+      "file_history": []
+    },
+    {
+      "path": "combine_data.py",
+      "functions": [
+        {
+          "name": "build_index_by_file",
+          "args": [
+            "code_data"
+          ],
+          "doc": "Turn analyze_project output into a dict keyed by file path for easy merging."
+        },
+        {
+          "name": "attach_commit_changes",
+          "args": [
+            "file_index",
+            "commit_changes"
+          ],
+          "doc": "commit_changes is a list of commits with changed_functions and message/date info\nWe attach commits to file entries and to the specific functions inside those files."
+        },
+        {
+          "name": "combine",
+          "args": [
+            "project_path"
+          ],
+          "doc": null
+        }
+      ],
+      "classes": [],
+      "file_history": []
+    },
+    {
+      "path": "demo.py",
+      "functions": [
+        {
+          "name": "greet",
+          "args": [
+            "name"
+          ],
+          "doc": "Return a greeting with punctuation and uppercase.",
+          "changed_in_commits": [
+            {
+              "commit": "a534d38ce95db8db89afdb1f8c3fde4cef57a804",
+              "message": "Refactor greet and add farewell function",
+              "date": "2025-11-28T10:49:01+05:30"
+            },
+            {
+              "commit": "db08f4c0f9e9753b5221e12b92250a27d51a47d3",
+              "message": "Improve greeting format",
+              "date": "2025-11-28T10:19:10+05:30"
+            },
+            {
+              "commit": "61828ed4f03c598ee8db21946e2b83d45e41bc85",
+              "message": "Add greet function",
+              "date": "2025-11-28T10:16:56+05:30"
+            }
+          ]
+        },
+        {
+          "name": "farewell",
+          "args": [
+            "name"
+          ],
+          "doc": "Say goodbye to the user.",
+          "changed_in_commits": [
+            {
+              "commit": "a534d38ce95db8db89afdb1f8c3fde4cef57a804",
+              "message": "Refactor greet and add farewell function",
+              "date": "2025-11-28T10:49:01+05:30"
+            }
+          ]
+        }
+      ],
+      "classes": [],
+      "file_history": [
+        {
+          "commit": "a534d38ce95db8db89afdb1f8c3fde4cef57a804",
+          "message": "Refactor greet and add farewell function",
+          "date": "2025-11-28T10:49:01+05:30",
+          "insertions": 0,
+          "deletions": 0
+        },
+        {
+          "commit": "db08f4c0f9e9753b5221e12b92250a27d51a47d3",
+          "message": "Improve greeting format",
+          "date": "2025-11-28T10:19:10+05:30",
+          "insertions": 0,
+          "deletions": 0
+        },
+        {
+          "commit": "61828ed4f03c598ee8db21946e2b83d45e41bc85",
+          "message": "Add greet function",
+          "date": "2025-11-28T10:16:56+05:30",
+          "insertions": 0,
+          "deletions": 0
+        }
+      ]
+    },
+    {
+      "path": "detect_changed_functions.py",
+      "functions": [
+        {
+          "name": "detect_changed_functions",
+          "args": [
+            "file_path",
+            "diff_text"
+          ],
+          "doc": null
+        }
+      ],
+      "classes": [],
+      "file_history": []
+    },
+    {
+      "path": "example.py",
+      "functions": [
+        {
+          "name": "greet",
+          "args": [
+            "name"
+          ],
+          "doc": "Return a greeting for name.",
+          "changed_in_commits": [
+            {
+              "commit": "a534d38ce95db8db89afdb1f8c3fde4cef57a804",
+              "message": "Refactor greet and add farewell function",
+              "date": "2025-11-28T10:49:01+05:30"
+            },
+            {
+              "commit": "db08f4c0f9e9753b5221e12b92250a27d51a47d3",
+              "message": "Improve greeting format",
+              "date": "2025-11-28T10:19:10+05:30"
+            },
+            {
+              "commit": "61828ed4f03c598ee8db21946e2b83d45e41bc85",
+              "message": "Add greet function",
+              "date": "2025-11-28T10:16:56+05:30"
+            }
+          ]
+        },
+        {
+          "name": "say_hi",
+          "args": [
+            "self"
+          ],
+          "doc": "Say hi"
+        }
+      ],
+      "classes": [
+        {
+          "name": "Person",
+          "doc": "Simple person class.",
+          "methods": [
+            {
+              "name": "say_hi",
+              "args": [
+                "self"
+              ],
+              "doc": "Say hi"
+            }
+          ]
+        }
+      ],
+      "file_history": [
+        {
+          "commit": "a534d38ce95db8db89afdb1f8c3fde4cef57a804",
+          "message": "Refactor greet and add farewell function",
+          "date": "2025-11-28T10:49:01+05:30",
+          "insertions": 0,
+          "deletions": 0
+        },
+        {
+          "commit": "db08f4c0f9e9753b5221e12b92250a27d51a47d3",
+          "message": "Improve greeting format",
+          "date": "2025-11-28T10:19:10+05:30",
+          "insertions": 0,
+          "deletions": 0
+        },
+        {
+          "commit": "61828ed4f03c598ee8db21946e2b83d45e41bc85",
+          "message": "Add greet function",
+          "date": "2025-11-28T10:16:56+05:30",
+          "insertions": 0,
+          "deletions": 0
+        }
+      ]
+    },
+    {
+      "path": "extract_commit_changes.py",
+      "functions": [
+        {
+          "name": "extract_commit_changes",
+          "args": [
+            "repo_path",
+            "file_path"
+          ],
+          "doc": null
+        }
+      ],
+      "classes": [],
+      "file_history": []
+    },
+    {
+      "path": "function_ranges.py",
+      "functions": [
+        {
+          "name": "get_function_ranges",
+          "args": [
+            "file_path"
+          ],
+          "doc": null
+        }
+      ],
+      "classes": [],
+      "file_history": []
+    },
+    {
+      "path": "parse_diff.py",
+      "functions": [
+        {
+          "name": "get_changed_lines",
+          "args": [
+            "diff_text"
+          ],
+          "doc": "Extract the line numbers of added lines ('+') in the new file."
+        }
+      ],
+      "classes": [],
+      "file_history": []
+    },
+    {
+      "path": "read_commits.py",
+      "functions": [],
+      "classes": [],
+      "file_history": []
+    }
+  ],
+  "commit_index": [
+    {
+      "commit": "a534d38ce95db8db89afdb1f8c3fde4cef57a804",
+      "message": "Refactor greet and add farewell function",
+      "date": "2025-11-28 10:49:01+05:30"
+    },
+    {
+      "commit": "db08f4c0f9e9753b5221e12b92250a27d51a47d3",
+      "message": "Improve greeting format",
+      "date": "2025-11-28 10:19:10+05:30"
+    },
+    {
+      "commit": "61828ed4f03c598ee8db21946e2b83d45e41bc85",
+      "message": "Add greet function",
+      "date": "2025-11-28 10:16:56+05:30"
+    }
+  ],
+  "summary": {
+    "num_files": 9,
+    "num_functions": 15,
+    "num_commits": 3
+  }
+}

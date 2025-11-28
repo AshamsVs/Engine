@@ -1,0 +1,22 @@
+{
+  "greet": [
+    {
+      "commit": "61828ed",
+      "message": "Add greet function"
+    },
+    {
+      "commit": "db08f4c",
+      "message": "Improve greeting format"
+    },
+    {
+      "commit": "a534d38",
+      "message": "Refactor greet and add farewell function"
+    }
+  ],
+  "farewell": [
+    {
+      "commit": "a534d38",
+      "message": "Refactor greet and add farewell function"
+    }
+  ]
+}
