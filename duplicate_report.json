@@ -1,0 +1,115 @@
+{
+    "2afbc069f21d7ff2e7db723fd6a7e530": [
+        {
+            "file": ".\\dependency_graph.py",
+            "name": "get_python_files",
+            "hash": "2afbc069f21d7ff2e7db723fd6a7e530"
+        },
+        {
+            "file": ".\\diff_explainer.py",
+            "name": "get_python_files",
+            "hash": "2afbc069f21d7ff2e7db723fd6a7e530"
+        },
+        {
+            "file": ".\\function_call_graph.py",
+            "name": "get_python_files",
+            "hash": "2afbc069f21d7ff2e7db723fd6a7e530"
+        }
+    ],
+    "b7666d20d7ce046aed487160015b520f": [
+        {
+            "file": ".\\dependency_graph.py",
+            "name": "extract_defined_functions",
+            "hash": "b7666d20d7ce046aed487160015b520f"
+        },
+        {
+            "file": ".\\function_call_graph.py",
+            "name": "extract_defined_functions",
+            "hash": "b7666d20d7ce046aed487160015b520f"
+        }
+    ],
+    "58f3e1b2b6b717d869dbf30266b2cac1": [
+        {
+            "file": ".\\dependency_graph.py",
+            "name": "extract_calls",
+            "hash": "58f3e1b2b6b717d869dbf30266b2cac1"
+        },
+        {
+            "file": ".\\function_call_graph.py",
+            "name": "extract_calls",
+            "hash": "58f3e1b2b6b717d869dbf30266b2cac1"
+        }
+    ],
+    "f7f8181915de8dcf1d6f5641d25e81d4": [
+        {
+            "file": ".\\dependency_graph.py",
+            "name": "build_filtered_call_graph",
+            "hash": "f7f8181915de8dcf1d6f5641d25e81d4"
+        },
+        {
+            "file": ".\\function_call_graph.py",
+            "name": "build_filtered_call_graph",
+            "hash": "f7f8181915de8dcf1d6f5641d25e81d4"
+        }
+    ],
+    "1b264798cb01680e5826fcf3f602958c": [
+        {
+            "file": ".\\diagram_generator.py",
+            "name": "load_dependencies",
+            "hash": "1b264798cb01680e5826fcf3f602958c"
+        },
+        {
+            "file": ".\\impact_analysis.py",
+            "name": "load_dependencies",
+            "hash": "1b264798cb01680e5826fcf3f602958c"
+        }
+    ],
+    "4598621cea21282720223f6cfa672a6c": [
+        {
+            "file": ".\\diff_explainer.py",
+            "name": "load_commit_changes",
+            "hash": "4598621cea21282720223f6cfa672a6c"
+        },
+        {
+            "file": ".\\generate_docs.py",
+            "name": "load_json",
+            "hash": "4598621cea21282720223f6cfa672a6c"
+        }
+    ],
+    "308610df5ddea9dda404ecb64205a586": [
+        {
+            "file": ".\\duplicate_detector.py",
+            "name": "get_python_files",
+            "hash": "308610df5ddea9dda404ecb64205a586"
+        },
+        {
+            "file": ".\\naming_checker.py",
+            "name": "get_python_files",
+            "hash": "308610df5ddea9dda404ecb64205a586"
+        }
+    ],
+    "4d5e807fc3c2a3f86c3df65bb66b5ee9": [
+        {
+            "file": ".\\function_timeline.py",
+            "name": "load_commit_changes",
+            "hash": "4d5e807fc3c2a3f86c3df65bb66b5ee9"
+        },
+        {
+            "file": ".\\impact_analysis.py",
+            "name": "load_commit_changes",
+            "hash": "4d5e807fc3c2a3f86c3df65bb66b5ee9"
+        }
+    ],
+    "eeac32903a387104467ff303f577beef": [
+        {
+            "file": ".\\quality_checker.py",
+            "name": "get_python_files",
+            "hash": "eeac32903a387104467ff303f577beef"
+        },
+        {
+            "file": ".\\unused_function_detector.py",
+            "name": "get_python_files",
+            "hash": "eeac32903a387104467ff303f577beef"
+        }
+    ]
+}

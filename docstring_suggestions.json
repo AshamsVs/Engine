@@ -1,0 +1,509 @@
+[
+  {
+    "file": ".\\analyze_project.py",
+    "function": "get_python_files",
+    "arguments": [
+      "folder_path"
+    ],
+    "has_return": true,
+    "existing_doc": null,
+    "suggested_docstring": "\"\"\" Get python files.\n\nParameters:\n    folder_path (any): Description.\n\nReturns:\n    any: Description.\n\n\"\"\""
+  },
+  {
+    "file": ".\\analyze_project.py",
+    "function": "analyze_file",
+    "arguments": [
+      "file_path"
+    ],
+    "has_return": true,
+    "existing_doc": null,
+    "suggested_docstring": "\"\"\" Analyze file.\n\nParameters:\n    file_path (any): Description.\n\nReturns:\n    any: Description.\n\n\"\"\""
+  },
+  {
+    "file": ".\\analyze_project.py",
+    "function": "analyze_project",
+    "arguments": [
+      "folder_path"
+    ],
+    "has_return": true,
+    "existing_doc": null,
+    "suggested_docstring": "\"\"\" Analyze project.\n\nParameters:\n    folder_path (any): Description.\n\nReturns:\n    any: Description.\n\n\"\"\""
+  },
+  {
+    "file": ".\\analyze_project.py",
+    "function": "generate_markdown",
+    "arguments": [
+      "project_data",
+      "output_file"
+    ],
+    "has_return": false,
+    "existing_doc": null,
+    "suggested_docstring": "\"\"\" Generate markdown.\n\nParameters:\n    project_data (any): Description.\n    output_file (any): Description.\n\n\"\"\""
+  },
+  {
+    "file": ".\\combine_data.py",
+    "function": "combine",
+    "arguments": [
+      "project_path"
+    ],
+    "has_return": true,
+    "existing_doc": null,
+    "suggested_docstring": "\"\"\" Combine.\n\nParameters:\n    project_path (any): Description.\n\nReturns:\n    any: Description.\n\n\"\"\""
+  },
+  {
+    "file": ".\\dependency_graph.py",
+    "function": "get_python_files",
+    "arguments": [
+      "folder"
+    ],
+    "has_return": true,
+    "existing_doc": null,
+    "suggested_docstring": "\"\"\" Get python files.\n\nParameters:\n    folder (any): Description.\n\nReturns:\n    any: Description.\n\n\"\"\""
+  },
+  {
+    "file": ".\\dependency_graph.py",
+    "function": "get_module_name",
+    "arguments": [
+      "file_path"
+    ],
+    "has_return": true,
+    "existing_doc": null,
+    "suggested_docstring": "\"\"\" Get module name.\n\nParameters:\n    file_path (any): Description.\n\nReturns:\n    any: Description.\n\n\"\"\""
+  },
+  {
+    "file": ".\\dependency_graph.py",
+    "function": "build_module_to_file_map",
+    "arguments": [
+      "folder"
+    ],
+    "has_return": true,
+    "existing_doc": null,
+    "suggested_docstring": "\"\"\" Build module to file map.\n\nParameters:\n    folder (any): Description.\n\nReturns:\n    any: Description.\n\n\"\"\""
+  },
+  {
+    "file": ".\\dependency_graph.py",
+    "function": "analyze_imports",
+    "arguments": [
+      "file_path"
+    ],
+    "has_return": true,
+    "existing_doc": null,
+    "suggested_docstring": "\"\"\" Analyze imports.\n\nParameters:\n    file_path (any): Description.\n\nReturns:\n    any: Description.\n\n\"\"\""
+  },
+  {
+    "file": ".\\dependency_graph.py",
+    "function": "build_file_dependency_graph",
+    "arguments": [
+      "folder"
+    ],
+    "has_return": true,
+    "existing_doc": null,
+    "suggested_docstring": "\"\"\" Build file dependency graph.\n\nParameters:\n    folder (any): Description.\n\nReturns:\n    any: Description.\n\n\"\"\""
+  },
+  {
+    "file": ".\\dependency_graph.py",
+    "function": "extract_defined_functions",
+    "arguments": [
+      "tree"
+    ],
+    "has_return": true,
+    "existing_doc": null,
+    "suggested_docstring": "\"\"\" Extract defined functions.\n\nParameters:\n    tree (any): Description.\n\nReturns:\n    any: Description.\n\n\"\"\""
+  },
+  {
+    "file": ".\\dependency_graph.py",
+    "function": "extract_calls",
+    "arguments": [
+      "func_node"
+    ],
+    "has_return": true,
+    "existing_doc": null,
+    "suggested_docstring": "\"\"\" Extract calls.\n\nParameters:\n    func_node (any): Description.\n\nReturns:\n    any: Description.\n\n\"\"\""
+  },
+  {
+    "file": ".\\dependency_graph.py",
+    "function": "build_filtered_call_graph",
+    "arguments": [
+      "folder"
+    ],
+    "has_return": true,
+    "existing_doc": null,
+    "suggested_docstring": "\"\"\" Build filtered call graph.\n\nParameters:\n    folder (any): Description.\n\nReturns:\n    any: Description.\n\n\"\"\""
+  },
+  {
+    "file": ".\\dependency_graph.py",
+    "function": "build_dependency_data",
+    "arguments": [
+      "folder"
+    ],
+    "has_return": true,
+    "existing_doc": null,
+    "suggested_docstring": "\"\"\" Build dependency data.\n\nParameters:\n    folder (any): Description.\n\nReturns:\n    any: Description.\n\n\"\"\""
+  },
+  {
+    "file": ".\\detect_changed_functions.py",
+    "function": "detect_changed_functions",
+    "arguments": [
+      "file_path",
+      "diff_text"
+    ],
+    "has_return": true,
+    "existing_doc": null,
+    "suggested_docstring": "\"\"\" Detect changed functions.\n\nParameters:\n    file_path (any): Description.\n    diff_text (any): Description.\n\nReturns:\n    any: Description.\n\n\"\"\""
+  },
+  {
+    "file": ".\\diagram_generator.py",
+    "function": "load_dependencies",
+    "arguments": [],
+    "has_return": true,
+    "existing_doc": null,
+    "suggested_docstring": "\"\"\" Load dependencies.\n\nReturns:\n    any: Description.\n\n\"\"\""
+  },
+  {
+    "file": ".\\diagram_generator.py",
+    "function": "generate_file_dependency_mermaid",
+    "arguments": [
+      "files"
+    ],
+    "has_return": true,
+    "existing_doc": null,
+    "suggested_docstring": "\"\"\" Generate file dependency mermaid.\n\nParameters:\n    files (any): Description.\n\nReturns:\n    any: Description.\n\n\"\"\""
+  },
+  {
+    "file": ".\\diagram_generator.py",
+    "function": "generate_function_dependency_mermaid",
+    "arguments": [
+      "funcs"
+    ],
+    "has_return": true,
+    "existing_doc": null,
+    "suggested_docstring": "\"\"\" Generate function dependency mermaid.\n\nParameters:\n    funcs (any): Description.\n\nReturns:\n    any: Description.\n\n\"\"\""
+  },
+  {
+    "file": ".\\diff_explainer.py",
+    "function": "load_commit_changes",
+    "arguments": [
+      "path"
+    ],
+    "has_return": true,
+    "existing_doc": null,
+    "suggested_docstring": "\"\"\" Load commit changes.\n\nParameters:\n    path (any): Description.\n\nReturns:\n    any: Description.\n\n\"\"\""
+  },
+  {
+    "file": ".\\diff_explainer.py",
+    "function": "normalize_code_line",
+    "arguments": [
+      "s"
+    ],
+    "has_return": true,
+    "existing_doc": null,
+    "suggested_docstring": "\"\"\" Normalize code line.\n\nParameters:\n    s (any): Description.\n\nReturns:\n    any: Description.\n\n\"\"\""
+  },
+  {
+    "file": ".\\diff_explainer.py",
+    "function": "detect_punctuation_change",
+    "arguments": [
+      "added",
+      "removed"
+    ],
+    "has_return": true,
+    "existing_doc": null,
+    "suggested_docstring": "\"\"\" Detect punctuation change.\n\nParameters:\n    added (any): Description.\n    removed (any): Description.\n\nReturns:\n    any: Description.\n\n\"\"\""
+  },
+  {
+    "file": ".\\diff_explainer.py",
+    "function": "detect_signature_change",
+    "arguments": [
+      "added",
+      "removed",
+      "func_name"
+    ],
+    "has_return": true,
+    "existing_doc": null,
+    "suggested_docstring": "\"\"\" Detect signature change.\n\nParameters:\n    added (any): Description.\n    removed (any): Description.\n    func_name (any): Description.\n\nReturns:\n    any: Description.\n\n\"\"\""
+  },
+  {
+    "file": ".\\diff_explainer.py",
+    "function": "detect_docstring_change",
+    "arguments": [
+      "added",
+      "removed"
+    ],
+    "has_return": true,
+    "existing_doc": null,
+    "suggested_docstring": "\"\"\" Detect docstring change.\n\nParameters:\n    added (any): Description.\n    removed (any): Description.\n\nReturns:\n    any: Description.\n\n\"\"\""
+  },
+  {
+    "file": ".\\diff_explainer.py",
+    "function": "detect_return_change",
+    "arguments": [
+      "added",
+      "removed"
+    ],
+    "has_return": true,
+    "existing_doc": null,
+    "suggested_docstring": "\"\"\" Detect return change.\n\nParameters:\n    added (any): Description.\n    removed (any): Description.\n\nReturns:\n    any: Description.\n\n\"\"\""
+  },
+  {
+    "file": ".\\diff_explainer.py",
+    "function": "detect_logic_change",
+    "arguments": [
+      "added",
+      "removed"
+    ],
+    "has_return": true,
+    "existing_doc": null,
+    "suggested_docstring": "\"\"\" Detect logic change.\n\nParameters:\n    added (any): Description.\n    removed (any): Description.\n\nReturns:\n    any: Description.\n\n\"\"\""
+  },
+  {
+    "file": ".\\diff_explainer.py",
+    "function": "explain_changes_for_function",
+    "arguments": [
+      "file_path",
+      "func_name",
+      "diff_text"
+    ],
+    "has_return": true,
+    "existing_doc": null,
+    "suggested_docstring": "\"\"\" Explain changes for function.\n\nParameters:\n    file_path (any): Description.\n    func_name (any): Description.\n    diff_text (any): Description.\n\nReturns:\n    any: Description.\n\n\"\"\""
+  },
+  {
+    "file": ".\\diff_explainer.py",
+    "function": "build_explanations",
+    "arguments": [
+      "output_md",
+      "output_json"
+    ],
+    "has_return": true,
+    "existing_doc": null,
+    "suggested_docstring": "\"\"\" Build explanations.\n\nParameters:\n    output_md (any): Description.\n    output_json (any): Description.\n\nReturns:\n    any: Description.\n\n\"\"\""
+  },
+  {
+    "file": ".\\diff_explainer.py",
+    "function": "get_python_files",
+    "arguments": [
+      "folder"
+    ],
+    "has_return": true,
+    "existing_doc": null,
+    "suggested_docstring": "\"\"\" Get python files.\n\nParameters:\n    folder (any): Description.\n\nReturns:\n    any: Description.\n\n\"\"\""
+  },
+  {
+    "file": ".\\docstring_generator.py",
+    "function": "get_python_files",
+    "arguments": [
+      "folder"
+    ],
+    "has_return": false,
+    "existing_doc": null,
+    "suggested_docstring": "\"\"\" Get python files.\n\nParameters:\n    folder (any): Description.\n\n\"\"\""
+  },
+  {
+    "file": ".\\docstring_generator.py",
+    "function": "build_docstring",
+    "arguments": [
+      "func_name",
+      "args",
+      "has_return"
+    ],
+    "has_return": true,
+    "existing_doc": null,
+    "suggested_docstring": "\"\"\" Build docstring.\n\nParameters:\n    func_name (any): Description.\n    args (any): Description.\n    has_return (any): Description.\n\nReturns:\n    any: Description.\n\n\"\"\""
+  },
+  {
+    "file": ".\\docstring_generator.py",
+    "function": "analyze_file",
+    "arguments": [
+      "file_path"
+    ],
+    "has_return": true,
+    "existing_doc": null,
+    "suggested_docstring": "\"\"\" Analyze file.\n\nParameters:\n    file_path (any): Description.\n\nReturns:\n    any: Description.\n\n\"\"\""
+  },
+  {
+    "file": ".\\docstring_generator.py",
+    "function": "generate_docstrings",
+    "arguments": [],
+    "has_return": true,
+    "existing_doc": null,
+    "suggested_docstring": "\"\"\" Generate docstrings.\n\nReturns:\n    any: Description.\n\n\"\"\""
+  },
+  {
+    "file": ".\\extract_commit_changes.py",
+    "function": "extract_commit_changes",
+    "arguments": [],
+    "has_return": true,
+    "existing_doc": null,
+    "suggested_docstring": "\"\"\" Extract commit changes.\n\nReturns:\n    any: Description.\n\n\"\"\""
+  },
+  {
+    "file": ".\\function_call_graph.py",
+    "function": "get_python_files",
+    "arguments": [
+      "folder"
+    ],
+    "has_return": true,
+    "existing_doc": null,
+    "suggested_docstring": "\"\"\" Get python files.\n\nParameters:\n    folder (any): Description.\n\nReturns:\n    any: Description.\n\n\"\"\""
+  },
+  {
+    "file": ".\\function_call_graph.py",
+    "function": "extract_defined_functions",
+    "arguments": [
+      "tree"
+    ],
+    "has_return": true,
+    "existing_doc": null,
+    "suggested_docstring": "\"\"\" Extract defined functions.\n\nParameters:\n    tree (any): Description.\n\nReturns:\n    any: Description.\n\n\"\"\""
+  },
+  {
+    "file": ".\\function_call_graph.py",
+    "function": "extract_calls",
+    "arguments": [
+      "func_node"
+    ],
+    "has_return": true,
+    "existing_doc": null,
+    "suggested_docstring": "\"\"\" Extract calls.\n\nParameters:\n    func_node (any): Description.\n\nReturns:\n    any: Description.\n\n\"\"\""
+  },
+  {
+    "file": ".\\function_call_graph.py",
+    "function": "build_filtered_call_graph",
+    "arguments": [
+      "folder"
+    ],
+    "has_return": true,
+    "existing_doc": null,
+    "suggested_docstring": "\"\"\" Build filtered call graph.\n\nParameters:\n    folder (any): Description.\n\nReturns:\n    any: Description.\n\n\"\"\""
+  },
+  {
+    "file": ".\\function_ranges.py",
+    "function": "get_function_ranges",
+    "arguments": [
+      "file_path"
+    ],
+    "has_return": true,
+    "existing_doc": null,
+    "suggested_docstring": "\"\"\" Get function ranges.\n\nParameters:\n    file_path (any): Description.\n\nReturns:\n    any: Description.\n\n\"\"\""
+  },
+  {
+    "file": ".\\function_timeline.py",
+    "function": "load_commit_changes",
+    "arguments": [],
+    "has_return": true,
+    "existing_doc": null,
+    "suggested_docstring": "\"\"\" Load commit changes.\n\nReturns:\n    any: Description.\n\n\"\"\""
+  },
+  {
+    "file": ".\\function_timeline.py",
+    "function": "build_timeline",
+    "arguments": [],
+    "has_return": true,
+    "existing_doc": null,
+    "suggested_docstring": "\"\"\" Build timeline.\n\nReturns:\n    any: Description.\n\n\"\"\""
+  },
+  {
+    "file": ".\\generate_docs.py",
+    "function": "load_json",
+    "arguments": [
+      "path"
+    ],
+    "has_return": true,
+    "existing_doc": null,
+    "suggested_docstring": "\"\"\" Load json.\n\nParameters:\n    path (any): Description.\n\nReturns:\n    any: Description.\n\n\"\"\""
+  },
+  {
+    "file": ".\\generate_docs.py",
+    "function": "load_template",
+    "arguments": [
+      "path"
+    ],
+    "has_return": true,
+    "existing_doc": null,
+    "suggested_docstring": "\"\"\" Load template.\n\nParameters:\n    path (any): Description.\n\nReturns:\n    any: Description.\n\n\"\"\""
+  },
+  {
+    "file": ".\\generate_docs.py",
+    "function": "build_prompt",
+    "arguments": [
+      "template",
+      "data"
+    ],
+    "has_return": true,
+    "existing_doc": null,
+    "suggested_docstring": "\"\"\" Build prompt.\n\nParameters:\n    template (any): Description.\n    data (any): Description.\n\nReturns:\n    any: Description.\n\n\"\"\""
+  },
+  {
+    "file": ".\\generate_docs.py",
+    "function": "simulate_llm",
+    "arguments": [
+      "prompt"
+    ],
+    "has_return": true,
+    "existing_doc": null,
+    "suggested_docstring": "\"\"\" Simulate llm.\n\nParameters:\n    prompt (any): Description.\n\nReturns:\n    any: Description.\n\n\"\"\""
+  },
+  {
+    "file": ".\\generate_docs.py",
+    "function": "main",
+    "arguments": [],
+    "has_return": false,
+    "existing_doc": null,
+    "suggested_docstring": "\"\"\" Main.\n\n\"\"\""
+  },
+  {
+    "file": ".\\impact_analysis.py",
+    "function": "load_dependencies",
+    "arguments": [],
+    "has_return": true,
+    "existing_doc": null,
+    "suggested_docstring": "\"\"\" Load dependencies.\n\nReturns:\n    any: Description.\n\n\"\"\""
+  },
+  {
+    "file": ".\\impact_analysis.py",
+    "function": "load_commit_changes",
+    "arguments": [],
+    "has_return": true,
+    "existing_doc": null,
+    "suggested_docstring": "\"\"\" Load commit changes.\n\nReturns:\n    any: Description.\n\n\"\"\""
+  },
+  {
+    "file": ".\\impact_analysis.py",
+    "function": "build_reverse_dependency_graph",
+    "arguments": [
+      "func_graph"
+    ],
+    "has_return": true,
+    "existing_doc": null,
+    "suggested_docstring": "\"\"\" Build reverse dependency graph.\n\nParameters:\n    func_graph (any): Description.\n\nReturns:\n    any: Description.\n\n\"\"\""
+  },
+  {
+    "file": ".\\impact_analysis.py",
+    "function": "get_full_impact",
+    "arguments": [
+      "changed_function",
+      "reverse_graph"
+    ],
+    "has_return": true,
+    "existing_doc": null,
+    "suggested_docstring": "\"\"\" Get full impact.\n\nParameters:\n    changed_function (any): Description.\n    reverse_graph (any): Description.\n\nReturns:\n    any: Description.\n\n\"\"\""
+  },
+  {
+    "file": ".\\impact_analysis.py",
+    "function": "calculate_risk_level",
+    "arguments": [
+      "impact_list"
+    ],
+    "has_return": true,
+    "existing_doc": null,
+    "suggested_docstring": "\"\"\" Calculate risk level.\n\nParameters:\n    impact_list (any): Description.\n\nReturns:\n    any: Description.\n\n\"\"\""
+  },
+  {
+    "file": ".\\impact_analysis.py",
+    "function": "build_cia_report",
+    "arguments": [],
+    "has_return": true,
+    "existing_doc": null,
+    "suggested_docstring": "\"\"\" Build cia report.\n\nReturns:\n    any: Description.\n\n\"\"\""
+  }
+]

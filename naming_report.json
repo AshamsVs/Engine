@@ -1,0 +1,122 @@
+{
+    ".\\analyze_project.py": {
+        "bad_functions": [],
+        "bad_variables": [],
+        "bad_classes": [],
+        "bad_constants": []
+    },
+    ".\\combine_data.py": {
+        "bad_functions": [],
+        "bad_variables": [],
+        "bad_classes": [],
+        "bad_constants": []
+    },
+    ".\\demo.py": {
+        "bad_functions": [],
+        "bad_variables": [],
+        "bad_classes": [],
+        "bad_constants": []
+    },
+    ".\\dependency_graph.py": {
+        "bad_functions": [],
+        "bad_variables": [],
+        "bad_classes": [],
+        "bad_constants": []
+    },
+    ".\\detect_changed_functions.py": {
+        "bad_functions": [],
+        "bad_variables": [],
+        "bad_classes": [],
+        "bad_constants": []
+    },
+    ".\\diagram_generator.py": {
+        "bad_functions": [],
+        "bad_variables": [],
+        "bad_classes": [],
+        "bad_constants": []
+    },
+    ".\\diff_explainer.py": {
+        "bad_functions": [],
+        "bad_variables": [],
+        "bad_classes": [],
+        "bad_constants": []
+    },
+    ".\\docstring_generator.py": {
+        "bad_functions": [],
+        "bad_variables": [],
+        "bad_classes": [],
+        "bad_constants": []
+    },
+    ".\\example.py": {
+        "bad_functions": [],
+        "bad_variables": [],
+        "bad_classes": [],
+        "bad_constants": []
+    },
+    ".\\extract_commit_changes.py": {
+        "bad_functions": [],
+        "bad_variables": [],
+        "bad_classes": [],
+        "bad_constants": []
+    },
+    ".\\function_call_graph.py": {
+        "bad_functions": [],
+        "bad_variables": [],
+        "bad_classes": [],
+        "bad_constants": []
+    },
+    ".\\function_ranges.py": {
+        "bad_functions": [],
+        "bad_variables": [],
+        "bad_classes": [],
+        "bad_constants": []
+    },
+    ".\\function_timeline.py": {
+        "bad_functions": [],
+        "bad_variables": [],
+        "bad_classes": [],
+        "bad_constants": []
+    },
+    ".\\generate_docs.py": {
+        "bad_functions": [],
+        "bad_variables": [],
+        "bad_classes": [],
+        "bad_constants": []
+    },
+    ".\\impact_analysis.py": {
+        "bad_functions": [],
+        "bad_variables": [],
+        "bad_classes": [],
+        "bad_constants": []
+    },
+    ".\\naming_checker.py": {
+        "bad_functions": [],
+        "bad_variables": [],
+        "bad_classes": [],
+        "bad_constants": []
+    },
+    ".\\parse_diff.py": {
+        "bad_functions": [],
+        "bad_variables": [],
+        "bad_classes": [],
+        "bad_constants": []
+    },
+    ".\\quality_checker.py": {
+        "bad_functions": [],
+        "bad_variables": [],
+        "bad_classes": [],
+        "bad_constants": []
+    },
+    ".\\read_commits.py": {
+        "bad_functions": [],
+        "bad_variables": [],
+        "bad_classes": [],
+        "bad_constants": []
+    },
+    ".\\unused_function_detector.py": {
+        "bad_functions": [],
+        "bad_variables": [],
+        "bad_classes": [],
+        "bad_constants": []
+    }
+}

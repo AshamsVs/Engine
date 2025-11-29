@@ -1,0 +1,474 @@
+## File: .\analyze_project.py
+### missing_docstrings
+[
+  "get_python_files",
+  "analyze_file",
+  "analyze_project",
+  "generate_markdown"
+]
+
+### long_functions
+[
+  {
+    "function": "analyze_file",
+    "length": 49,
+    "threshold": 30
+  },
+  {
+    "function": "generate_markdown",
+    "length": 33,
+    "threshold": 30
+  }
+]
+
+### too_many_parameters
+No issues found.
+
+### deep_nesting
+[
+  {
+    "function": "analyze_file",
+    "nesting_depth": 5,
+    "threshold": 3
+  },
+  {
+    "function": "generate_markdown",
+    "nesting_depth": 5,
+    "threshold": 3
+  }
+]
+
+### todo_comments
+No issues found.
+
+## File: .\combine_data.py
+### missing_docstrings
+[
+  "combine"
+]
+
+### long_functions
+[
+  {
+    "function": "attach_commit_changes",
+    "length": 36,
+    "threshold": 30
+  },
+  {
+    "function": "combine",
+    "length": 55,
+    "threshold": 30
+  }
+]
+
+### too_many_parameters
+No issues found.
+
+### deep_nesting
+[
+  {
+    "function": "attach_commit_changes",
+    "nesting_depth": 6,
+    "threshold": 3
+  }
+]
+
+### todo_comments
+No issues found.
+
+## File: .\demo.py
+### missing_docstrings
+No issues found.
+
+### long_functions
+No issues found.
+
+### too_many_parameters
+No issues found.
+
+### deep_nesting
+No issues found.
+
+### todo_comments
+No issues found.
+
+## File: .\dependency_graph.py
+### missing_docstrings
+[
+  "get_python_files",
+  "get_module_name",
+  "build_module_to_file_map",
+  "analyze_imports",
+  "build_file_dependency_graph",
+  "extract_defined_functions",
+  "extract_calls",
+  "build_filtered_call_graph",
+  "build_dependency_data"
+]
+
+### long_functions
+No issues found.
+
+### too_many_parameters
+No issues found.
+
+### deep_nesting
+[
+  {
+    "function": "analyze_imports",
+    "nesting_depth": 4,
+    "threshold": 3
+  },
+  {
+    "function": "extract_calls",
+    "nesting_depth": 4,
+    "threshold": 3
+  }
+]
+
+### todo_comments
+No issues found.
+
+## File: .\detect_changed_functions.py
+### missing_docstrings
+[
+  "detect_changed_functions"
+]
+
+### long_functions
+No issues found.
+
+### too_many_parameters
+No issues found.
+
+### deep_nesting
+No issues found.
+
+### todo_comments
+No issues found.
+
+## File: .\diagram_generator.py
+### missing_docstrings
+[
+  "load_dependencies",
+  "generate_file_dependency_mermaid",
+  "generate_function_dependency_mermaid"
+]
+
+### long_functions
+No issues found.
+
+### too_many_parameters
+No issues found.
+
+### deep_nesting
+No issues found.
+
+### todo_comments
+No issues found.
+
+## File: .\diff_explainer.py
+### missing_docstrings
+[
+  "load_commit_changes",
+  "normalize_code_line",
+  "detect_punctuation_change",
+  "detect_signature_change",
+  "detect_docstring_change",
+  "detect_return_change",
+  "detect_logic_change",
+  "explain_changes_for_function",
+  "build_explanations",
+  "get_python_files"
+]
+
+### long_functions
+[
+  {
+    "function": "extract_hunks",
+    "length": 39,
+    "threshold": 30
+  },
+  {
+    "function": "explain_changes_for_function",
+    "length": 90,
+    "threshold": 30
+  },
+  {
+    "function": "build_explanations",
+    "length": 59,
+    "threshold": 30
+  }
+]
+
+### too_many_parameters
+No issues found.
+
+### deep_nesting
+[
+  {
+    "function": "collect_added_removed_lines_in_func",
+    "nesting_depth": 5,
+    "threshold": 3
+  },
+  {
+    "function": "detect_signature_change",
+    "nesting_depth": 4,
+    "threshold": 3
+  },
+  {
+    "function": "explain_changes_for_function",
+    "nesting_depth": 5,
+    "threshold": 3
+  },
+  {
+    "function": "build_explanations",
+    "nesting_depth": 5,
+    "threshold": 3
+  }
+]
+
+### todo_comments
+No issues found.
+
+## File: .\docstring_generator.py
+### missing_docstrings
+[
+  "get_python_files",
+  "build_docstring",
+  "analyze_file",
+  "generate_docstrings"
+]
+
+### long_functions
+No issues found.
+
+### too_many_parameters
+No issues found.
+
+### deep_nesting
+No issues found.
+
+### todo_comments
+No issues found.
+
+## File: .\example.py
+### missing_docstrings
+No issues found.
+
+### long_functions
+No issues found.
+
+### too_many_parameters
+No issues found.
+
+### deep_nesting
+No issues found.
+
+### todo_comments
+No issues found.
+
+## File: .\extract_commit_changes.py
+### missing_docstrings
+[
+  "extract_commit_changes"
+]
+
+### long_functions
+No issues found.
+
+### too_many_parameters
+No issues found.
+
+### deep_nesting
+[
+  {
+    "function": "extract_commit_changes",
+    "nesting_depth": 4,
+    "threshold": 3
+  }
+]
+
+### todo_comments
+No issues found.
+
+## File: .\function_call_graph.py
+### missing_docstrings
+[
+  "get_python_files",
+  "extract_defined_functions",
+  "extract_calls",
+  "build_filtered_call_graph"
+]
+
+### long_functions
+No issues found.
+
+### too_many_parameters
+No issues found.
+
+### deep_nesting
+[
+  {
+    "function": "extract_calls",
+    "nesting_depth": 4,
+    "threshold": 3
+  }
+]
+
+### todo_comments
+No issues found.
+
+## File: .\function_ranges.py
+### missing_docstrings
+[
+  "get_function_ranges"
+]
+
+### long_functions
+No issues found.
+
+### too_many_parameters
+No issues found.
+
+### deep_nesting
+No issues found.
+
+### todo_comments
+No issues found.
+
+## File: .\function_timeline.py
+### missing_docstrings
+[
+  "load_commit_changes",
+  "build_timeline"
+]
+
+### long_functions
+No issues found.
+
+### too_many_parameters
+No issues found.
+
+### deep_nesting
+No issues found.
+
+### todo_comments
+No issues found.
+
+## File: .\generate_docs.py
+### missing_docstrings
+[
+  "load_json",
+  "load_template",
+  "build_prompt",
+  "simulate_llm",
+  "main"
+]
+
+### long_functions
+No issues found.
+
+### too_many_parameters
+No issues found.
+
+### deep_nesting
+No issues found.
+
+### todo_comments
+No issues found.
+
+## File: .\impact_analysis.py
+### missing_docstrings
+[
+  "load_dependencies",
+  "load_commit_changes",
+  "build_reverse_dependency_graph",
+  "get_full_impact",
+  "calculate_risk_level",
+  "build_cia_report"
+]
+
+### long_functions
+No issues found.
+
+### too_many_parameters
+No issues found.
+
+### deep_nesting
+[
+  {
+    "function": "get_full_impact",
+    "nesting_depth": 4,
+    "threshold": 3
+  }
+]
+
+### todo_comments
+No issues found.
+
+## File: .\parse_diff.py
+### missing_docstrings
+No issues found.
+
+### long_functions
+No issues found.
+
+### too_many_parameters
+No issues found.
+
+### deep_nesting
+No issues found.
+
+### todo_comments
+No issues found.
+
+## File: .\quality_checker.py
+### missing_docstrings
+No issues found.
+
+### long_functions
+[
+  {
+    "function": "analyze_quality",
+    "length": 39,
+    "threshold": 30
+  }
+]
+
+### too_many_parameters
+No issues found.
+
+### deep_nesting
+[
+  {
+    "function": "detect_long_functions",
+    "nesting_depth": 4,
+    "threshold": 3
+  },
+  {
+    "function": "analyze_quality",
+    "nesting_depth": 4,
+    "threshold": 3
+  }
+]
+
+### todo_comments
+No issues found.
+
+## File: .\read_commits.py
+### missing_docstrings
+No issues found.
+
+### long_functions
+No issues found.
+
+### too_many_parameters
+No issues found.
+
+### deep_nesting
+No issues found.
+
+### todo_comments
+No issues found.
+

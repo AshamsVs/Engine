@@ -1,0 +1,1269 @@
+<h1>Project Documentation Report</h1>
+<p>Generated automatically by the Documentation Engine.</p>
+<hr />
+<h2>📁 Project Path</h2>
+<p><code>C:\Users\91773\OneDrive\Desktop\Engine</code></p>
+<h2>🕒 Generated At</h2>
+<p><code>2025-11-29T15:05:42.273086</code></p>
+<hr />
+<h1>1. Project Structure</h1>
+<p>{}</p>
+<hr />
+<h1>2. File Dependencies</h1>
+<p>{
+  ".\analyze_project.py": [],
+  ".\combine_data.py": [
+    ".\analyze_project.py",
+    ".\extract_commit_changes.py"
+  ],
+  ".\demo.py": [],
+  ".\dependency_graph.py": [],
+  ".\detect_changed_functions.py": [
+    ".\function_ranges.py",
+    ".\parse_diff.py"
+  ],
+  ".\example.py": [],
+  ".\extract_commit_changes.py": [
+    ".\detect_changed_functions.py",
+    ".\function_ranges.py"
+  ],
+  ".\function_call_graph.py": [],
+  ".\function_ranges.py": [],
+  ".\generate_docs.py": [],
+  ".\parse_diff.py": [],
+  ".\read_commits.py": []
+}</p>
+<hr />
+<h1>3. Function Dependencies</h1>
+<p>{
+  "analyze_file": [],
+  "analyze_imports": [],
+  "analyze_project": [
+    "get_python_files",
+    "analyze_file"
+  ],
+  "attach_commit_changes": [],
+  "build_dependency_data": [
+    "build_file_dependency_graph",
+    "build_filtered_call_graph"
+  ],
+  "build_file_dependency_graph": [
+    "build_module_to_file_map",
+    "get_python_files",
+    "analyze_imports"
+  ],
+  "build_filtered_call_graph": [
+    "get_python_files",
+    "extract_defined_functions",
+    "extract_calls"
+  ],
+  "build_index_by_file": [],
+  "build_module_to_file_map": [
+    "get_python_files",
+    "get_module_name"
+  ],
+  "build_prompt": [],
+  "combine": [
+    "analyze_project",
+    "extract_commit_changes",
+    "build_index_by_file",
+    "attach_commit_changes"
+  ],
+  "detect_changed_functions": [
+    "get_function_ranges",
+    "get_changed_lines"
+  ],
+  "extract_calls": [],
+  "extract_commit_changes": [
+    "detect_changed_functions"
+  ],
+  "extract_defined_functions": [],
+  "farewell": [],
+  "generate_markdown": [],
+  "get_changed_lines": [],
+  "get_function_ranges": [],
+  "get_module_name": [],
+  "get_python_files": [],
+  "greet": [],
+  "load_json": [],
+  "load_template": [],
+  "main": [
+    "load_json",
+    "load_template",
+    "build_prompt",
+    "simulate_llm",
+    "simulate_llm"
+  ],
+  "simulate_llm": []
+}</p>
+<hr />
+<h1>4. Git Commit History</h1>
+<ul>
+<li><strong>Commit:</strong> a534d38ce95db8db89afdb1f8c3fde4cef57a804</li>
+<li><strong>Message:</strong> Refactor greet and add farewell function</li>
+<li><strong>Changed Functions:</strong> ['farewell', 'greet']</li>
+</ul>
+<hr />
+<ul>
+<li><strong>Commit:</strong> db08f4c0f9e9753b5221e12b92250a27d51a47d3</li>
+<li><strong>Message:</strong> Improve greeting format</li>
+<li><strong>Changed Functions:</strong> ['greet']</li>
+</ul>
+<hr />
+<ul>
+<li><strong>Commit:</strong> 61828ed4f03c598ee8db21946e2b83d45e41bc85</li>
+<li><strong>Message:</strong> Add greet function</li>
+<li><strong>Changed Functions:</strong> ['greet']</li>
+</ul>
+<hr />
+<hr />
+<h1>5. Change Impact Analysis</h1>
+<p>{
+  "61828ed4f03c598ee8db21946e2b83d45e41bc85": {
+    "greet": {
+      "direct_and_indirect_impact": [],
+      "risk": "LOW"
+    }
+  },
+  "a534d38ce95db8db89afdb1f8c3fde4cef57a804": {
+    "farewell": {
+      "direct_and_indirect_impact": [],
+      "risk": "LOW"
+    },
+    "greet": {
+      "direct_and_indirect_impact": [],
+      "risk": "LOW"
+    }
+  },
+  "db08f4c0f9e9753b5221e12b92250a27d51a47d3": {
+    "greet": {
+      "direct_and_indirect_impact": [],
+      "risk": "LOW"
+    }
+  }
+}</p>
+<hr />
+<h1>6. Evolution Timeline</h1>
+<p>{
+  "farewell": [
+    {
+      "commit": "a534d38",
+      "message": "Refactor greet and add farewell function"
+    }
+  ],
+  "greet": [
+    {
+      "commit": "61828ed",
+      "message": "Add greet function"
+    },
+    {
+      "commit": "db08f4c",
+      "message": "Improve greeting format"
+    },
+    {
+      "commit": "a534d38",
+      "message": "Refactor greet and add farewell function"
+    }
+  ]
+}</p>
+<hr />
+<h1>7. Diff Explanations</h1>
+<h3>Commit: a534d38ce95db8db89afdb1f8c3fde4cef57a804 | Function: <code>farewell</code></h3>
+<p>File: <code>.\demo.py</code>
+- Summary: A docstring was added to the function. Return statement or returned value was modified. Function <code>farewell</code> was added: <code>def farewell(name):</code>.</p>
+<hr />
+<h3>Commit: a534d38ce95db8db89afdb1f8c3fde4cef57a804 | Function: <code>greet</code></h3>
+<p>File: <code>.\demo.py</code>
+- Summary: A docstring was added to the function. Return statement or returned value was modified.</p>
+<hr />
+<h3>Commit: db08f4c0f9e9753b5221e12b92250a27d51a47d3 | Function: <code>greet</code></h3>
+<p>File: <code>.\demo.py</code>
+- Summary: String/formatting change detected. Example removed: <code>return "Hello " + name</code> → added: <code>return "Hello, " + name + "!"</code>. Return statement or returned value was modified.</p>
+<hr />
+<h3>Commit: 61828ed4f03c598ee8db21946e2b83d45e41bc85 | Function: <code>greet</code></h3>
+<p>File: <code>.\demo.py</code>
+- Summary: Return statement or returned value was modified. Function <code>greet</code> was added: <code>def greet(name):</code>.</p>
+<hr />
+<hr />
+<h1>8. Suggested Docstrings</h1>
+<h3>File: .\analyze_project.py | Function: <strong>get_python_files</strong></h3>
+<p><strong>Arguments:</strong> ['folder_path']<br />
+<strong>Has Return:</strong> True</p>
+<p>""" Get python files.</p>
+<p>Parameters:
+    folder_path (any): Description.</p>
+<p>Returns:
+    any: Description.</p>
+<p>"""</p>
+<hr />
+<h3>File: .\analyze_project.py | Function: <strong>analyze_file</strong></h3>
+<p><strong>Arguments:</strong> ['file_path']<br />
+<strong>Has Return:</strong> True</p>
+<p>""" Analyze file.</p>
+<p>Parameters:
+    file_path (any): Description.</p>
+<p>Returns:
+    any: Description.</p>
+<p>"""</p>
+<hr />
+<h3>File: .\analyze_project.py | Function: <strong>analyze_project</strong></h3>
+<p><strong>Arguments:</strong> ['folder_path']<br />
+<strong>Has Return:</strong> True</p>
+<p>""" Analyze project.</p>
+<p>Parameters:
+    folder_path (any): Description.</p>
+<p>Returns:
+    any: Description.</p>
+<p>"""</p>
+<hr />
+<h3>File: .\analyze_project.py | Function: <strong>generate_markdown</strong></h3>
+<p><strong>Arguments:</strong> ['project_data', 'output_file']<br />
+<strong>Has Return:</strong> False</p>
+<p>""" Generate markdown.</p>
+<p>Parameters:
+    project_data (any): Description.
+    output_file (any): Description.</p>
+<p>"""</p>
+<hr />
+<h3>File: .\combine_data.py | Function: <strong>combine</strong></h3>
+<p><strong>Arguments:</strong> ['project_path']<br />
+<strong>Has Return:</strong> True</p>
+<p>""" Combine.</p>
+<p>Parameters:
+    project_path (any): Description.</p>
+<p>Returns:
+    any: Description.</p>
+<p>"""</p>
+<hr />
+<h3>File: .\dependency_graph.py | Function: <strong>get_python_files</strong></h3>
+<p><strong>Arguments:</strong> ['folder']<br />
+<strong>Has Return:</strong> True</p>
+<p>""" Get python files.</p>
+<p>Parameters:
+    folder (any): Description.</p>
+<p>Returns:
+    any: Description.</p>
+<p>"""</p>
+<hr />
+<h3>File: .\dependency_graph.py | Function: <strong>get_module_name</strong></h3>
+<p><strong>Arguments:</strong> ['file_path']<br />
+<strong>Has Return:</strong> True</p>
+<p>""" Get module name.</p>
+<p>Parameters:
+    file_path (any): Description.</p>
+<p>Returns:
+    any: Description.</p>
+<p>"""</p>
+<hr />
+<h3>File: .\dependency_graph.py | Function: <strong>build_module_to_file_map</strong></h3>
+<p><strong>Arguments:</strong> ['folder']<br />
+<strong>Has Return:</strong> True</p>
+<p>""" Build module to file map.</p>
+<p>Parameters:
+    folder (any): Description.</p>
+<p>Returns:
+    any: Description.</p>
+<p>"""</p>
+<hr />
+<h3>File: .\dependency_graph.py | Function: <strong>analyze_imports</strong></h3>
+<p><strong>Arguments:</strong> ['file_path']<br />
+<strong>Has Return:</strong> True</p>
+<p>""" Analyze imports.</p>
+<p>Parameters:
+    file_path (any): Description.</p>
+<p>Returns:
+    any: Description.</p>
+<p>"""</p>
+<hr />
+<h3>File: .\dependency_graph.py | Function: <strong>build_file_dependency_graph</strong></h3>
+<p><strong>Arguments:</strong> ['folder']<br />
+<strong>Has Return:</strong> True</p>
+<p>""" Build file dependency graph.</p>
+<p>Parameters:
+    folder (any): Description.</p>
+<p>Returns:
+    any: Description.</p>
+<p>"""</p>
+<hr />
+<h3>File: .\dependency_graph.py | Function: <strong>extract_defined_functions</strong></h3>
+<p><strong>Arguments:</strong> ['tree']<br />
+<strong>Has Return:</strong> True</p>
+<p>""" Extract defined functions.</p>
+<p>Parameters:
+    tree (any): Description.</p>
+<p>Returns:
+    any: Description.</p>
+<p>"""</p>
+<hr />
+<h3>File: .\dependency_graph.py | Function: <strong>extract_calls</strong></h3>
+<p><strong>Arguments:</strong> ['func_node']<br />
+<strong>Has Return:</strong> True</p>
+<p>""" Extract calls.</p>
+<p>Parameters:
+    func_node (any): Description.</p>
+<p>Returns:
+    any: Description.</p>
+<p>"""</p>
+<hr />
+<h3>File: .\dependency_graph.py | Function: <strong>build_filtered_call_graph</strong></h3>
+<p><strong>Arguments:</strong> ['folder']<br />
+<strong>Has Return:</strong> True</p>
+<p>""" Build filtered call graph.</p>
+<p>Parameters:
+    folder (any): Description.</p>
+<p>Returns:
+    any: Description.</p>
+<p>"""</p>
+<hr />
+<h3>File: .\dependency_graph.py | Function: <strong>build_dependency_data</strong></h3>
+<p><strong>Arguments:</strong> ['folder']<br />
+<strong>Has Return:</strong> True</p>
+<p>""" Build dependency data.</p>
+<p>Parameters:
+    folder (any): Description.</p>
+<p>Returns:
+    any: Description.</p>
+<p>"""</p>
+<hr />
+<h3>File: .\detect_changed_functions.py | Function: <strong>detect_changed_functions</strong></h3>
+<p><strong>Arguments:</strong> ['file_path', 'diff_text']<br />
+<strong>Has Return:</strong> True</p>
+<p>""" Detect changed functions.</p>
+<p>Parameters:
+    file_path (any): Description.
+    diff_text (any): Description.</p>
+<p>Returns:
+    any: Description.</p>
+<p>"""</p>
+<hr />
+<h3>File: .\diagram_generator.py | Function: <strong>load_dependencies</strong></h3>
+<p><strong>Arguments:</strong> []<br />
+<strong>Has Return:</strong> True</p>
+<p>""" Load dependencies.</p>
+<p>Returns:
+    any: Description.</p>
+<p>"""</p>
+<hr />
+<h3>File: .\diagram_generator.py | Function: <strong>generate_file_dependency_mermaid</strong></h3>
+<p><strong>Arguments:</strong> ['files']<br />
+<strong>Has Return:</strong> True</p>
+<p>""" Generate file dependency mermaid.</p>
+<p>Parameters:
+    files (any): Description.</p>
+<p>Returns:
+    any: Description.</p>
+<p>"""</p>
+<hr />
+<h3>File: .\diagram_generator.py | Function: <strong>generate_function_dependency_mermaid</strong></h3>
+<p><strong>Arguments:</strong> ['funcs']<br />
+<strong>Has Return:</strong> True</p>
+<p>""" Generate function dependency mermaid.</p>
+<p>Parameters:
+    funcs (any): Description.</p>
+<p>Returns:
+    any: Description.</p>
+<p>"""</p>
+<hr />
+<h3>File: .\diff_explainer.py | Function: <strong>load_commit_changes</strong></h3>
+<p><strong>Arguments:</strong> ['path']<br />
+<strong>Has Return:</strong> True</p>
+<p>""" Load commit changes.</p>
+<p>Parameters:
+    path (any): Description.</p>
+<p>Returns:
+    any: Description.</p>
+<p>"""</p>
+<hr />
+<h3>File: .\diff_explainer.py | Function: <strong>normalize_code_line</strong></h3>
+<p><strong>Arguments:</strong> ['s']<br />
+<strong>Has Return:</strong> True</p>
+<p>""" Normalize code line.</p>
+<p>Parameters:
+    s (any): Description.</p>
+<p>Returns:
+    any: Description.</p>
+<p>"""</p>
+<hr />
+<h3>File: .\diff_explainer.py | Function: <strong>detect_punctuation_change</strong></h3>
+<p><strong>Arguments:</strong> ['added', 'removed']<br />
+<strong>Has Return:</strong> True</p>
+<p>""" Detect punctuation change.</p>
+<p>Parameters:
+    added (any): Description.
+    removed (any): Description.</p>
+<p>Returns:
+    any: Description.</p>
+<p>"""</p>
+<hr />
+<h3>File: .\diff_explainer.py | Function: <strong>detect_signature_change</strong></h3>
+<p><strong>Arguments:</strong> ['added', 'removed', 'func_name']<br />
+<strong>Has Return:</strong> True</p>
+<p>""" Detect signature change.</p>
+<p>Parameters:
+    added (any): Description.
+    removed (any): Description.
+    func_name (any): Description.</p>
+<p>Returns:
+    any: Description.</p>
+<p>"""</p>
+<hr />
+<h3>File: .\diff_explainer.py | Function: <strong>detect_docstring_change</strong></h3>
+<p><strong>Arguments:</strong> ['added', 'removed']<br />
+<strong>Has Return:</strong> True</p>
+<p>""" Detect docstring change.</p>
+<p>Parameters:
+    added (any): Description.
+    removed (any): Description.</p>
+<p>Returns:
+    any: Description.</p>
+<p>"""</p>
+<hr />
+<h3>File: .\diff_explainer.py | Function: <strong>detect_return_change</strong></h3>
+<p><strong>Arguments:</strong> ['added', 'removed']<br />
+<strong>Has Return:</strong> True</p>
+<p>""" Detect return change.</p>
+<p>Parameters:
+    added (any): Description.
+    removed (any): Description.</p>
+<p>Returns:
+    any: Description.</p>
+<p>"""</p>
+<hr />
+<h3>File: .\diff_explainer.py | Function: <strong>detect_logic_change</strong></h3>
+<p><strong>Arguments:</strong> ['added', 'removed']<br />
+<strong>Has Return:</strong> True</p>
+<p>""" Detect logic change.</p>
+<p>Parameters:
+    added (any): Description.
+    removed (any): Description.</p>
+<p>Returns:
+    any: Description.</p>
+<p>"""</p>
+<hr />
+<h3>File: .\diff_explainer.py | Function: <strong>explain_changes_for_function</strong></h3>
+<p><strong>Arguments:</strong> ['file_path', 'func_name', 'diff_text']<br />
+<strong>Has Return:</strong> True</p>
+<p>""" Explain changes for function.</p>
+<p>Parameters:
+    file_path (any): Description.
+    func_name (any): Description.
+    diff_text (any): Description.</p>
+<p>Returns:
+    any: Description.</p>
+<p>"""</p>
+<hr />
+<h3>File: .\diff_explainer.py | Function: <strong>build_explanations</strong></h3>
+<p><strong>Arguments:</strong> ['output_md', 'output_json']<br />
+<strong>Has Return:</strong> True</p>
+<p>""" Build explanations.</p>
+<p>Parameters:
+    output_md (any): Description.
+    output_json (any): Description.</p>
+<p>Returns:
+    any: Description.</p>
+<p>"""</p>
+<hr />
+<h3>File: .\diff_explainer.py | Function: <strong>get_python_files</strong></h3>
+<p><strong>Arguments:</strong> ['folder']<br />
+<strong>Has Return:</strong> True</p>
+<p>""" Get python files.</p>
+<p>Parameters:
+    folder (any): Description.</p>
+<p>Returns:
+    any: Description.</p>
+<p>"""</p>
+<hr />
+<h3>File: .\docstring_generator.py | Function: <strong>get_python_files</strong></h3>
+<p><strong>Arguments:</strong> ['folder']<br />
+<strong>Has Return:</strong> False</p>
+<p>""" Get python files.</p>
+<p>Parameters:
+    folder (any): Description.</p>
+<p>"""</p>
+<hr />
+<h3>File: .\docstring_generator.py | Function: <strong>build_docstring</strong></h3>
+<p><strong>Arguments:</strong> ['func_name', 'args', 'has_return']<br />
+<strong>Has Return:</strong> True</p>
+<p>""" Build docstring.</p>
+<p>Parameters:
+    func_name (any): Description.
+    args (any): Description.
+    has_return (any): Description.</p>
+<p>Returns:
+    any: Description.</p>
+<p>"""</p>
+<hr />
+<h3>File: .\docstring_generator.py | Function: <strong>analyze_file</strong></h3>
+<p><strong>Arguments:</strong> ['file_path']<br />
+<strong>Has Return:</strong> True</p>
+<p>""" Analyze file.</p>
+<p>Parameters:
+    file_path (any): Description.</p>
+<p>Returns:
+    any: Description.</p>
+<p>"""</p>
+<hr />
+<h3>File: .\docstring_generator.py | Function: <strong>generate_docstrings</strong></h3>
+<p><strong>Arguments:</strong> []<br />
+<strong>Has Return:</strong> True</p>
+<p>""" Generate docstrings.</p>
+<p>Returns:
+    any: Description.</p>
+<p>"""</p>
+<hr />
+<h3>File: .\extract_commit_changes.py | Function: <strong>extract_commit_changes</strong></h3>
+<p><strong>Arguments:</strong> []<br />
+<strong>Has Return:</strong> True</p>
+<p>""" Extract commit changes.</p>
+<p>Returns:
+    any: Description.</p>
+<p>"""</p>
+<hr />
+<h3>File: .\function_call_graph.py | Function: <strong>get_python_files</strong></h3>
+<p><strong>Arguments:</strong> ['folder']<br />
+<strong>Has Return:</strong> True</p>
+<p>""" Get python files.</p>
+<p>Parameters:
+    folder (any): Description.</p>
+<p>Returns:
+    any: Description.</p>
+<p>"""</p>
+<hr />
+<h3>File: .\function_call_graph.py | Function: <strong>extract_defined_functions</strong></h3>
+<p><strong>Arguments:</strong> ['tree']<br />
+<strong>Has Return:</strong> True</p>
+<p>""" Extract defined functions.</p>
+<p>Parameters:
+    tree (any): Description.</p>
+<p>Returns:
+    any: Description.</p>
+<p>"""</p>
+<hr />
+<h3>File: .\function_call_graph.py | Function: <strong>extract_calls</strong></h3>
+<p><strong>Arguments:</strong> ['func_node']<br />
+<strong>Has Return:</strong> True</p>
+<p>""" Extract calls.</p>
+<p>Parameters:
+    func_node (any): Description.</p>
+<p>Returns:
+    any: Description.</p>
+<p>"""</p>
+<hr />
+<h3>File: .\function_call_graph.py | Function: <strong>build_filtered_call_graph</strong></h3>
+<p><strong>Arguments:</strong> ['folder']<br />
+<strong>Has Return:</strong> True</p>
+<p>""" Build filtered call graph.</p>
+<p>Parameters:
+    folder (any): Description.</p>
+<p>Returns:
+    any: Description.</p>
+<p>"""</p>
+<hr />
+<h3>File: .\function_ranges.py | Function: <strong>get_function_ranges</strong></h3>
+<p><strong>Arguments:</strong> ['file_path']<br />
+<strong>Has Return:</strong> True</p>
+<p>""" Get function ranges.</p>
+<p>Parameters:
+    file_path (any): Description.</p>
+<p>Returns:
+    any: Description.</p>
+<p>"""</p>
+<hr />
+<h3>File: .\function_timeline.py | Function: <strong>load_commit_changes</strong></h3>
+<p><strong>Arguments:</strong> []<br />
+<strong>Has Return:</strong> True</p>
+<p>""" Load commit changes.</p>
+<p>Returns:
+    any: Description.</p>
+<p>"""</p>
+<hr />
+<h3>File: .\function_timeline.py | Function: <strong>build_timeline</strong></h3>
+<p><strong>Arguments:</strong> []<br />
+<strong>Has Return:</strong> True</p>
+<p>""" Build timeline.</p>
+<p>Returns:
+    any: Description.</p>
+<p>"""</p>
+<hr />
+<h3>File: .\generate_docs.py | Function: <strong>load_json</strong></h3>
+<p><strong>Arguments:</strong> ['path']<br />
+<strong>Has Return:</strong> True</p>
+<p>""" Load json.</p>
+<p>Parameters:
+    path (any): Description.</p>
+<p>Returns:
+    any: Description.</p>
+<p>"""</p>
+<hr />
+<h3>File: .\generate_docs.py | Function: <strong>load_template</strong></h3>
+<p><strong>Arguments:</strong> ['path']<br />
+<strong>Has Return:</strong> True</p>
+<p>""" Load template.</p>
+<p>Parameters:
+    path (any): Description.</p>
+<p>Returns:
+    any: Description.</p>
+<p>"""</p>
+<hr />
+<h3>File: .\generate_docs.py | Function: <strong>build_prompt</strong></h3>
+<p><strong>Arguments:</strong> ['template', 'data']<br />
+<strong>Has Return:</strong> True</p>
+<p>""" Build prompt.</p>
+<p>Parameters:
+    template (any): Description.
+    data (any): Description.</p>
+<p>Returns:
+    any: Description.</p>
+<p>"""</p>
+<hr />
+<h3>File: .\generate_docs.py | Function: <strong>simulate_llm</strong></h3>
+<p><strong>Arguments:</strong> ['prompt']<br />
+<strong>Has Return:</strong> True</p>
+<p>""" Simulate llm.</p>
+<p>Parameters:
+    prompt (any): Description.</p>
+<p>Returns:
+    any: Description.</p>
+<p>"""</p>
+<hr />
+<h3>File: .\generate_docs.py | Function: <strong>main</strong></h3>
+<p><strong>Arguments:</strong> []<br />
+<strong>Has Return:</strong> False</p>
+<p>""" Main.</p>
+<p>"""</p>
+<hr />
+<h3>File: .\impact_analysis.py | Function: <strong>load_dependencies</strong></h3>
+<p><strong>Arguments:</strong> []<br />
+<strong>Has Return:</strong> True</p>
+<p>""" Load dependencies.</p>
+<p>Returns:
+    any: Description.</p>
+<p>"""</p>
+<hr />
+<h3>File: .\impact_analysis.py | Function: <strong>load_commit_changes</strong></h3>
+<p><strong>Arguments:</strong> []<br />
+<strong>Has Return:</strong> True</p>
+<p>""" Load commit changes.</p>
+<p>Returns:
+    any: Description.</p>
+<p>"""</p>
+<hr />
+<h3>File: .\impact_analysis.py | Function: <strong>build_reverse_dependency_graph</strong></h3>
+<p><strong>Arguments:</strong> ['func_graph']<br />
+<strong>Has Return:</strong> True</p>
+<p>""" Build reverse dependency graph.</p>
+<p>Parameters:
+    func_graph (any): Description.</p>
+<p>Returns:
+    any: Description.</p>
+<p>"""</p>
+<hr />
+<h3>File: .\impact_analysis.py | Function: <strong>get_full_impact</strong></h3>
+<p><strong>Arguments:</strong> ['changed_function', 'reverse_graph']<br />
+<strong>Has Return:</strong> True</p>
+<p>""" Get full impact.</p>
+<p>Parameters:
+    changed_function (any): Description.
+    reverse_graph (any): Description.</p>
+<p>Returns:
+    any: Description.</p>
+<p>"""</p>
+<hr />
+<h3>File: .\impact_analysis.py | Function: <strong>calculate_risk_level</strong></h3>
+<p><strong>Arguments:</strong> ['impact_list']<br />
+<strong>Has Return:</strong> True</p>
+<p>""" Calculate risk level.</p>
+<p>Parameters:
+    impact_list (any): Description.</p>
+<p>Returns:
+    any: Description.</p>
+<p>"""</p>
+<hr />
+<h3>File: .\impact_analysis.py | Function: <strong>build_cia_report</strong></h3>
+<p><strong>Arguments:</strong> []<br />
+<strong>Has Return:</strong> True</p>
+<p>""" Build cia report.</p>
+<p>Returns:
+    any: Description.</p>
+<p>"""</p>
+<hr />
+<hr />
+<h1>9. Quality Issues</h1>
+<p>{
+  ".\analyze_project.py": {
+    "deep_nesting": [
+      {
+        "function": "analyze_file",
+        "nesting_depth": 5,
+        "threshold": 3
+      },
+      {
+        "function": "generate_markdown",
+        "nesting_depth": 5,
+        "threshold": 3
+      }
+    ],
+    "long_functions": [
+      {
+        "function": "analyze_file",
+        "length": 49,
+        "threshold": 30
+      },
+      {
+        "function": "generate_markdown",
+        "length": 33,
+        "threshold": 30
+      }
+    ],
+    "missing_docstrings": [
+      "get_python_files",
+      "analyze_file",
+      "analyze_project",
+      "generate_markdown"
+    ],
+    "todo_comments": [],
+    "too_many_parameters": []
+  },
+  ".\combine_data.py": {
+    "deep_nesting": [
+      {
+        "function": "attach_commit_changes",
+        "nesting_depth": 6,
+        "threshold": 3
+      }
+    ],
+    "long_functions": [
+      {
+        "function": "attach_commit_changes",
+        "length": 36,
+        "threshold": 30
+      },
+      {
+        "function": "combine",
+        "length": 55,
+        "threshold": 30
+      }
+    ],
+    "missing_docstrings": [
+      "combine"
+    ],
+    "todo_comments": [],
+    "too_many_parameters": []
+  },
+  ".\demo.py": {
+    "deep_nesting": [],
+    "long_functions": [],
+    "missing_docstrings": [],
+    "todo_comments": [],
+    "too_many_parameters": []
+  },
+  ".\dependency_graph.py": {
+    "deep_nesting": [
+      {
+        "function": "analyze_imports",
+        "nesting_depth": 4,
+        "threshold": 3
+      },
+      {
+        "function": "extract_calls",
+        "nesting_depth": 4,
+        "threshold": 3
+      }
+    ],
+    "long_functions": [],
+    "missing_docstrings": [
+      "get_python_files",
+      "get_module_name",
+      "build_module_to_file_map",
+      "analyze_imports",
+      "build_file_dependency_graph",
+      "extract_defined_functions",
+      "extract_calls",
+      "build_filtered_call_graph",
+      "build_dependency_data"
+    ],
+    "todo_comments": [],
+    "too_many_parameters": []
+  },
+  ".\detect_changed_functions.py": {
+    "deep_nesting": [],
+    "long_functions": [],
+    "missing_docstrings": [
+      "detect_changed_functions"
+    ],
+    "todo_comments": [],
+    "too_many_parameters": []
+  },
+  ".\diagram_generator.py": {
+    "deep_nesting": [],
+    "long_functions": [],
+    "missing_docstrings": [
+      "load_dependencies",
+      "generate_file_dependency_mermaid",
+      "generate_function_dependency_mermaid"
+    ],
+    "todo_comments": [],
+    "too_many_parameters": []
+  },
+  ".\diff_explainer.py": {
+    "deep_nesting": [
+      {
+        "function": "collect_added_removed_lines_in_func",
+        "nesting_depth": 5,
+        "threshold": 3
+      },
+      {
+        "function": "detect_signature_change",
+        "nesting_depth": 4,
+        "threshold": 3
+      },
+      {
+        "function": "explain_changes_for_function",
+        "nesting_depth": 5,
+        "threshold": 3
+      },
+      {
+        "function": "build_explanations",
+        "nesting_depth": 5,
+        "threshold": 3
+      }
+    ],
+    "long_functions": [
+      {
+        "function": "extract_hunks",
+        "length": 39,
+        "threshold": 30
+      },
+      {
+        "function": "explain_changes_for_function",
+        "length": 90,
+        "threshold": 30
+      },
+      {
+        "function": "build_explanations",
+        "length": 59,
+        "threshold": 30
+      }
+    ],
+    "missing_docstrings": [
+      "load_commit_changes",
+      "normalize_code_line",
+      "detect_punctuation_change",
+      "detect_signature_change",
+      "detect_docstring_change",
+      "detect_return_change",
+      "detect_logic_change",
+      "explain_changes_for_function",
+      "build_explanations",
+      "get_python_files"
+    ],
+    "todo_comments": [],
+    "too_many_parameters": []
+  },
+  ".\docstring_generator.py": {
+    "deep_nesting": [],
+    "long_functions": [],
+    "missing_docstrings": [
+      "get_python_files",
+      "build_docstring",
+      "analyze_file",
+      "generate_docstrings"
+    ],
+    "todo_comments": [],
+    "too_many_parameters": []
+  },
+  ".\example.py": {
+    "deep_nesting": [],
+    "long_functions": [],
+    "missing_docstrings": [],
+    "todo_comments": [],
+    "too_many_parameters": []
+  },
+  ".\extract_commit_changes.py": {
+    "deep_nesting": [
+      {
+        "function": "extract_commit_changes",
+        "nesting_depth": 4,
+        "threshold": 3
+      }
+    ],
+    "long_functions": [],
+    "missing_docstrings": [
+      "extract_commit_changes"
+    ],
+    "todo_comments": [],
+    "too_many_parameters": []
+  },
+  ".\function_call_graph.py": {
+    "deep_nesting": [
+      {
+        "function": "extract_calls",
+        "nesting_depth": 4,
+        "threshold": 3
+      }
+    ],
+    "long_functions": [],
+    "missing_docstrings": [
+      "get_python_files",
+      "extract_defined_functions",
+      "extract_calls",
+      "build_filtered_call_graph"
+    ],
+    "todo_comments": [],
+    "too_many_parameters": []
+  },
+  ".\function_ranges.py": {
+    "deep_nesting": [],
+    "long_functions": [],
+    "missing_docstrings": [
+      "get_function_ranges"
+    ],
+    "todo_comments": [],
+    "too_many_parameters": []
+  },
+  ".\function_timeline.py": {
+    "deep_nesting": [],
+    "long_functions": [],
+    "missing_docstrings": [
+      "load_commit_changes",
+      "build_timeline"
+    ],
+    "todo_comments": [],
+    "too_many_parameters": []
+  },
+  ".\generate_docs.py": {
+    "deep_nesting": [],
+    "long_functions": [],
+    "missing_docstrings": [
+      "load_json",
+      "load_template",
+      "build_prompt",
+      "simulate_llm",
+      "main"
+    ],
+    "todo_comments": [],
+    "too_many_parameters": []
+  },
+  ".\impact_analysis.py": {
+    "deep_nesting": [
+      {
+        "function": "get_full_impact",
+        "nesting_depth": 4,
+        "threshold": 3
+      }
+    ],
+    "long_functions": [],
+    "missing_docstrings": [
+      "load_dependencies",
+      "load_commit_changes",
+      "build_reverse_dependency_graph",
+      "get_full_impact",
+      "calculate_risk_level",
+      "build_cia_report"
+    ],
+    "todo_comments": [],
+    "too_many_parameters": []
+  },
+  ".\parse_diff.py": {
+    "deep_nesting": [],
+    "long_functions": [],
+    "missing_docstrings": [],
+    "todo_comments": [],
+    "too_many_parameters": []
+  },
+  ".\quality_checker.py": {
+    "deep_nesting": [
+      {
+        "function": "detect_long_functions",
+        "nesting_depth": 4,
+        "threshold": 3
+      },
+      {
+        "function": "analyze_quality",
+        "nesting_depth": 4,
+        "threshold": 3
+      }
+    ],
+    "long_functions": [
+      {
+        "function": "analyze_quality",
+        "length": 39,
+        "threshold": 30
+      }
+    ],
+    "missing_docstrings": [],
+    "todo_comments": [],
+    "too_many_parameters": []
+  },
+  ".\read_commits.py": {
+    "deep_nesting": [],
+    "long_functions": [],
+    "missing_docstrings": [],
+    "todo_comments": [],
+    "too_many_parameters": []
+  }
+}</p>
+<hr />
+<h1>10. Naming Issues</h1>
+<p>{
+  ".\analyze_project.py": {
+    "bad_classes": [],
+    "bad_constants": [],
+    "bad_functions": [],
+    "bad_variables": []
+  },
+  ".\combine_data.py": {
+    "bad_classes": [],
+    "bad_constants": [],
+    "bad_functions": [],
+    "bad_variables": []
+  },
+  ".\demo.py": {
+    "bad_classes": [],
+    "bad_constants": [],
+    "bad_functions": [],
+    "bad_variables": []
+  },
+  ".\dependency_graph.py": {
+    "bad_classes": [],
+    "bad_constants": [],
+    "bad_functions": [],
+    "bad_variables": []
+  },
+  ".\detect_changed_functions.py": {
+    "bad_classes": [],
+    "bad_constants": [],
+    "bad_functions": [],
+    "bad_variables": []
+  },
+  ".\diagram_generator.py": {
+    "bad_classes": [],
+    "bad_constants": [],
+    "bad_functions": [],
+    "bad_variables": []
+  },
+  ".\diff_explainer.py": {
+    "bad_classes": [],
+    "bad_constants": [],
+    "bad_functions": [],
+    "bad_variables": []
+  },
+  ".\docstring_generator.py": {
+    "bad_classes": [],
+    "bad_constants": [],
+    "bad_functions": [],
+    "bad_variables": []
+  },
+  ".\example.py": {
+    "bad_classes": [],
+    "bad_constants": [],
+    "bad_functions": [],
+    "bad_variables": []
+  },
+  ".\extract_commit_changes.py": {
+    "bad_classes": [],
+    "bad_constants": [],
+    "bad_functions": [],
+    "bad_variables": []
+  },
+  ".\function_call_graph.py": {
+    "bad_classes": [],
+    "bad_constants": [],
+    "bad_functions": [],
+    "bad_variables": []
+  },
+  ".\function_ranges.py": {
+    "bad_classes": [],
+    "bad_constants": [],
+    "bad_functions": [],
+    "bad_variables": []
+  },
+  ".\function_timeline.py": {
+    "bad_classes": [],
+    "bad_constants": [],
+    "bad_functions": [],
+    "bad_variables": []
+  },
+  ".\generate_docs.py": {
+    "bad_classes": [],
+    "bad_constants": [],
+    "bad_functions": [],
+    "bad_variables": []
+  },
+  ".\impact_analysis.py": {
+    "bad_classes": [],
+    "bad_constants": [],
+    "bad_functions": [],
+    "bad_variables": []
+  },
+  ".\naming_checker.py": {
+    "bad_classes": [],
+    "bad_constants": [],
+    "bad_functions": [],
+    "bad_variables": []
+  },
+  ".\parse_diff.py": {
+    "bad_classes": [],
+    "bad_constants": [],
+    "bad_functions": [],
+    "bad_variables": []
+  },
+  ".\quality_checker.py": {
+    "bad_classes": [],
+    "bad_constants": [],
+    "bad_functions": [],
+    "bad_variables": []
+  },
+  ".\read_commits.py": {
+    "bad_classes": [],
+    "bad_constants": [],
+    "bad_functions": [],
+    "bad_variables": []
+  },
+  ".\unused_function_detector.py": {
+    "bad_classes": [],
+    "bad_constants": [],
+    "bad_functions": [],
+    "bad_variables": []
+  }
+}</p>
+<hr />
+<h1>11. Duplicate Functions</h1>
+<p>{
+  "1b264798cb01680e5826fcf3f602958c": [
+    {
+      "file": ".\diagram_generator.py",
+      "hash": "1b264798cb01680e5826fcf3f602958c",
+      "name": "load_dependencies"
+    },
+    {
+      "file": ".\impact_analysis.py",
+      "hash": "1b264798cb01680e5826fcf3f602958c",
+      "name": "load_dependencies"
+    }
+  ],
+  "2afbc069f21d7ff2e7db723fd6a7e530": [
+    {
+      "file": ".\dependency_graph.py",
+      "hash": "2afbc069f21d7ff2e7db723fd6a7e530",
+      "name": "get_python_files"
+    },
+    {
+      "file": ".\diff_explainer.py",
+      "hash": "2afbc069f21d7ff2e7db723fd6a7e530",
+      "name": "get_python_files"
+    },
+    {
+      "file": ".\function_call_graph.py",
+      "hash": "2afbc069f21d7ff2e7db723fd6a7e530",
+      "name": "get_python_files"
+    }
+  ],
+  "308610df5ddea9dda404ecb64205a586": [
+    {
+      "file": ".\duplicate_detector.py",
+      "hash": "308610df5ddea9dda404ecb64205a586",
+      "name": "get_python_files"
+    },
+    {
+      "file": ".\naming_checker.py",
+      "hash": "308610df5ddea9dda404ecb64205a586",
+      "name": "get_python_files"
+    }
+  ],
+  "4598621cea21282720223f6cfa672a6c": [
+    {
+      "file": ".\diff_explainer.py",
+      "hash": "4598621cea21282720223f6cfa672a6c",
+      "name": "load_commit_changes"
+    },
+    {
+      "file": ".\generate_docs.py",
+      "hash": "4598621cea21282720223f6cfa672a6c",
+      "name": "load_json"
+    }
+  ],
+  "4d5e807fc3c2a3f86c3df65bb66b5ee9": [
+    {
+      "file": ".\function_timeline.py",
+      "hash": "4d5e807fc3c2a3f86c3df65bb66b5ee9",
+      "name": "load_commit_changes"
+    },
+    {
+      "file": ".\impact_analysis.py",
+      "hash": "4d5e807fc3c2a3f86c3df65bb66b5ee9",
+      "name": "load_commit_changes"
+    }
+  ],
+  "58f3e1b2b6b717d869dbf30266b2cac1": [
+    {
+      "file": ".\dependency_graph.py",
+      "hash": "58f3e1b2b6b717d869dbf30266b2cac1",
+      "name": "extract_calls"
+    },
+    {
+      "file": ".\function_call_graph.py",
+      "hash": "58f3e1b2b6b717d869dbf30266b2cac1",
+      "name": "extract_calls"
+    }
+  ],
+  "b7666d20d7ce046aed487160015b520f": [
+    {
+      "file": ".\dependency_graph.py",
+      "hash": "b7666d20d7ce046aed487160015b520f",
+      "name": "extract_defined_functions"
+    },
+    {
+      "file": ".\function_call_graph.py",
+      "hash": "b7666d20d7ce046aed487160015b520f",
+      "name": "extract_defined_functions"
+    }
+  ],
+  "eeac32903a387104467ff303f577beef": [
+    {
+      "file": ".\quality_checker.py",
+      "hash": "eeac32903a387104467ff303f577beef",
+      "name": "get_python_files"
+    },
+    {
+      "file": ".\unused_function_detector.py",
+      "hash": "eeac32903a387104467ff303f577beef",
+      "name": "get_python_files"
+    }
+  ],
+  "f7f8181915de8dcf1d6f5641d25e81d4": [
+    {
+      "file": ".\dependency_graph.py",
+      "hash": "f7f8181915de8dcf1d6f5641d25e81d4",
+      "name": "build_filtered_call_graph"
+    },
+    {
+      "file": ".\function_call_graph.py",
+      "hash": "f7f8181915de8dcf1d6f5641d25e81d4",
+      "name": "build_filtered_call_graph"
+    }
+  ]
+}</p>
+<hr />
+<h1>12. Unused Functions</h1>
+<p>{
+  ".\demo.py": [
+    "greet",
+    "farewell"
+  ],
+  ".\example.py": [
+    "greet",
+    "say_hi"
+  ]
+}</p>
+<hr />
+<h1>13. Metadata</h1>
+<p>{
+  "generated_at": "2025-11-29T15:05:42.273086",
+  "merged_unused_at": "2025-11-29T15:18:16.089804",
+  "project_path": "C:\Users\91773\OneDrive\Desktop\Engine",
+  "unused_source": "C:\Users\91773\OneDrive\Desktop\Engine\unused_functions.json",
+  "version": "2.0"
+}</p>
+<hr />
+<p><em>End of Report</em></p>

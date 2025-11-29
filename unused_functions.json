@@ -1,0 +1,10 @@
+{
+  ".\\demo.py": [
+    "greet",
+    "farewell"
+  ],
+  ".\\example.py": [
+    "greet",
+    "say_hi"
+  ]
+}
