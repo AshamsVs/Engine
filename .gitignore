@@ -1,0 +1,18 @@
+# Python cache
+__pycache__/
+*.pyc
+
+# AutoDoc output
+autodoc_output/
+*.html
+*.pdf
+*.md
+*.json
+
+# Virtual environments
+venv/
+env/
+
+# OS files
+*.DS_Store
+Thumbs.db
