@@ -23,22 +23,20 @@ jobs:
         run: |
           pip install markdown jinja2 weasyprint gitpython
 
-      # STEP 1 — Generate the combined JSON file
+      # STEP 1 — Generate combined JSON (NO cd needed)
       - name: Generate combined data
         run: |
-          cd Engine
-          python combine_data.py --out ../combined_data_v3.json
+          python combine_data.py --out combined_data_v3.json
 
-      # STEP 2 — Run the exporter with correct paths
+      # STEP 2 — Run exporter (NO cd needed)
       - name: Run Documentation Exporter
         run: |
-          cd Engine
           python exporter.py \
-            --data ../combined_data_v3.json \
+            --data combined_data_v3.json \
             --template templates/report_template.md \
-            --out ../output/report
+            --out output/report
 
-      # STEP 3 — Upload report artifacts
+      # STEP 3 — Upload output folder
       - name: Upload report artifacts
         uses: actions/upload-artifact@v4
         with:
