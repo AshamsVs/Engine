@@ -9,7 +9,10 @@ def build_index_by_file(code_data):
     """Turn analyze_project output into a dict keyed by file path for easy merging."""
     index = {}
     for f in code_data:
-        path = os.path.normpath(f["file"])
+        # assume analyze_project returns 'file' as relative path; normalize
+        path = os.path.normpath(f.get("file", ""))
+        if not path:
+            continue
 
         index[path] = {
             "path": path,
@@ -23,23 +26,19 @@ def build_index_by_file(code_data):
 def attach_commit_changes(file_index, commit_changes):
     """
     Attach commit metadata into files and functions.
-    commit_changes = transformed list:
-    {
-        commit_id, message, date, per_file_function_changes:[{file, functions}]
-    }
+    commit_changes is expected as list of:
+      { commit_id, message, date, per_file_function_changes: [{file, functions, insertions, deletions}] }
     """
     for commit in commit_changes:
-        cid = commit["commit_id"]
-        msg = commit["message"]
-        date = commit["date"]  # already ISO string
+        cid = commit.get("commit_id") or commit.get("commit")
+        msg = commit.get("message", "")
+        date = commit.get("date")
 
-        # Preferred format: per_file_function_changes
         for change in commit.get("per_file_function_changes", []):
-            fpath = os.path.normpath(change["file"])
+            fpath = os.path.normpath(change.get("file", ""))
             funcs = change.get("functions", [])
 
             if fpath in file_index:
-                # attach to file history
                 file_index[fpath]["file_history"].append({
                     "commit": cid,
                     "message": msg,
@@ -48,10 +47,10 @@ def attach_commit_changes(file_index, commit_changes):
                     "deletions": change.get("deletions", 0)
                 })
 
-                # attach to individual functions inside that file
-                for fn in funcs:
-                    for func_obj in file_index[fpath]["functions"]:
-                        if func_obj["name"] == fn:
+                # attach to function objects in that file (exact name match)
+                for fn_name in funcs:
+                    for func_obj in file_index[fpath].get("functions", []):
+                        if func_obj.get("name") == fn_name:
                             func_obj.setdefault("changed_in_commits", []).append({
                                 "commit": cid,
                                 "message": msg,
@@ -61,29 +60,25 @@ def attach_commit_changes(file_index, commit_changes):
 
 def combine(project_path="."):
     # ---- Phase 1: Code analysis ----
-    code_data = analyze_project(project_path)
+    code_data = analyze_project(project_path) or []
 
     # ---- Phase 2: Git commit data ----
-    commit_changes = extract_commit_changes(project_path)
-    # commit_changes looks like:
-    # { commit, message, date, changed_functions }
+    commit_changes = extract_commit_changes(project_path) or []
 
     # Build file index
     file_index = build_index_by_file(code_data)
 
-    # Transform commit_changes → format usable by attach_commit_changes()
+    # Transform commit_changes -> per-file mapping
     per_commit_transformed = []
     for c in commit_changes:
         mapping = []
+        changed_funcs = c.get("changed_functions", [])
 
+        # For each file in the code index, find changed function names that belong to it
         for fpath, file_obj in file_index.items():
-            func_names = [fn["name"] for fn in file_obj.get("functions", [])]
-
-            # which changed functions belong to this file?
-            changed_here = [
-                fn for fn in c.get("changed_functions", [])
-                if fn in func_names
-            ]
+            func_names = [fn.get("name") for fn in file_obj.get("functions", []) if fn.get("name")]
+            # exact-match filtering
+            changed_here = [fn for fn in changed_funcs if fn in func_names]
 
             if changed_here:
                 mapping.append({
@@ -94,10 +89,10 @@ def combine(project_path="."):
                 })
 
         per_commit_transformed.append({
-            "commit_id": c["commit"],
-            "message": c["message"],
-            "date": c["date"],                      # keep date
-            "changed_functions": c["changed_functions"],
+            "commit_id": c.get("commit"),
+            "message": c.get("message"),
+            "date": c.get("date"),
+            "changed_functions": changed_funcs,
             "per_file_function_changes": mapping
         })
 
@@ -114,13 +109,13 @@ def combine(project_path="."):
         "files": list(file_index.values()),
 
         "commit_index": [
-            {"commit": c["commit"], "message": c["message"], "date": c["date"]}
+            {"commit": c.get("commit"), "message": c.get("message"), "date": c.get("date")}
             for c in commit_changes
         ],
 
         "summary": {
             "num_files": len(file_index),
-            "num_functions": sum(len(f["functions"]) for f in file_index.values()),
+            "num_functions": sum(len(f.get("functions", [])) for f in file_index.values()),
             "num_commits": len(commit_changes)
         }
     }

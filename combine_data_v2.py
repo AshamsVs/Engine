@@ -1,14 +1,20 @@
 # combine_data_v2.py
-
 import json
 import os
 from datetime import datetime
 
+
 def load_json(path):
     if os.path.exists(path):
-        with open(path, "r", encoding="utf-8") as f:
-            return json.load(f)
+        try:
+            with open(path, "r", encoding="utf-8") as f:
+                return json.load(f)
+        except json.JSONDecodeError:
+            # If file exists but is invalid, return empty structure and warn
+            print(f"[WARN] Invalid JSON at {path}, skipping.")
+            return {}
     return {}
+
 
 def build_combined_v2():
     combined = {
@@ -30,10 +36,12 @@ def build_combined_v2():
         }
     }
 
-    with open("combined_data_v2.json", "w") as f:
+    out_path = "combined_data_v2.json"
+    with open(out_path, "w", encoding="utf-8") as f:
         json.dump(combined, f, indent=4)
 
-    print("Wrote combined_data_v2.json")
+    print(f"Wrote {out_path}")
+
 
 if __name__ == "__main__":
     build_combined_v2()

@@ -13,6 +13,8 @@ jobs:
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0   # IMPORTANT for Git history
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -23,12 +25,13 @@ jobs:
         run: |
           pip install markdown jinja2 weasyprint gitpython
 
-      # STEP 1 — Generate combined JSON (NO cd needed)
+      # STEP 1 — Generate combined JSON
       - name: Generate combined data
         run: |
-          python combine_data.py --out combined_data_v3.json
+          python combine_data.py
+          mv combined_data.json combined_data_v3.json
 
-      # STEP 2 — Run exporter (NO cd needed)
+      # STEP 2 — Run exporter
       - name: Run Documentation Exporter
         run: |
           python exporter.py \
