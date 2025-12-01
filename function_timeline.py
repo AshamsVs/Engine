@@ -1,36 +1,44 @@
-import json
 
-def load_commit_changes():
-    with open("commit_changes.json", "r") as f:
-        return json.load(f)
+import json, os
 
-def build_timeline():
-    commits = load_commit_changes()
+def norm(p):
+    return os.path.basename(p.replace("\\", "/"))
 
-    # Reverse order → oldest commit first
-    commits = list(reversed(commits))
+def classify(s):
+    s = s.lower()
+    if "was added" in s:
+        return "added"
+    if "refactor" in s:
+        return "refactored"
+    return "modified"
 
-    timeline = {}
+def build():
+    if not os.path.exists("diff_explanations.json"):
+        return {}
 
-    for entry in commits:
-        commit_id = entry["commit"][:7]  # short hash
-        message = entry["message"]
-        changed_funcs = entry["changed_functions"]
+    data = json.load(open("diff_explanations.json"))
+    out = {}
 
-        for func in changed_funcs:
-            timeline.setdefault(func, [])
-            timeline[func].append({
-                "commit": commit_id,
-                "message": message
-            })
+    for e in data:
+        f = norm(e.get("file", ""))
+        fn = e.get("function")
+        c = e.get("commit")
 
-    return timeline
+        if not f or not fn or not c:
+            continue
+
+        out.setdefault(f, {})
+        out[f].setdefault(fn, [])
+        out[f][fn].append({
+            "commit": c[:7],
+            "type": classify(e.get("summary", ""))
+        })
+    return out
+
+def save():
+    t = build()
+    json.dump(t, open("function_timeline.json", "w"), indent=2)
+    print("[OK] wrote function_timeline.json")
 
 if __name__ == "__main__":
-    timeline = build_timeline()
-    print(json.dumps(timeline, indent=2))
-
-    with open("function_timeline.json", "w") as f:
-        json.dump(timeline, f, indent=2)
-
-    print("\nWrote function_timeline.json")
+    save()
