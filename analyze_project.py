@@ -1,14 +1,14 @@
 import os
 import ast
 
-def get_python_files(folder_path):
-    python_files = []
-    for root, dirs, files in os.walk(folder_path):
-        for file in files:
-            if file.endswith(".py"):
-                python_files.append(os.path.join(root, file))
-    return python_files
+def get_python_files(folder):
+    for root, dirs, files in os.walk(folder):
+        if "venv" in root or "__pycache__" in root:
+            continue
 
+        for f in files:
+            if f.endswith(".py"):
+                yield os.path.join(root, f)
 
 def analyze_file(file_path):
     with open(file_path, "r", encoding="utf-8") as file:
