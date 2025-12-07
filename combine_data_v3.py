@@ -224,6 +224,39 @@ def build_combined(project_path: str = ".",
         fuzzy_threshold=fuzzy_threshold,
         max_commits=max_commits
     )
+        # map commits -> files/functions
+    per_commit_transformed = map_commit_changes_to_files(
+        file_index,
+        commit_changes,
+        match_mode=match_mode,
+        fuzzy_threshold=fuzzy_threshold,
+        max_commits=max_commits
+    )
+
+    # ------------------------------------------
+    # NEW: Build dependency graphs (file + call)
+    # ------------------------------------------
+    try:
+        from dependency_graph import build_dependency_data
+        from diagram_generator import (
+            generate_file_dependency_mermaid,
+            generate_function_dependency_mermaid
+        )
+    except Exception as e:
+        print("[WARN] Could not import dependency graph modules:", e)
+        deps = {"files": {}, "functions": {}}
+    else:
+        deps = build_dependency_data(project_path)
+
+    # Generate Mermaid diagrams
+    try:
+        file_mermaid = generate_file_dependency_mermaid(deps["files"])
+        func_mermaid = generate_function_dependency_mermaid(deps["functions"])
+    except Exception as e:
+        print("[WARN] Mermaid graph generation failed:", e)
+        file_mermaid = "flowchart TD;\nA[Graph unavailable]"
+        func_mermaid = "flowchart TD;\nA[Graph unavailable]"
+
 
     # attach history
     attach_commit_changes(file_index, per_commit_transformed)
@@ -265,7 +298,7 @@ def build_combined(project_path: str = ".",
         },
 
         # existing analysis + computed indices
-        "project_structure": safe_load_json("project_data.json") or {},  # optional
+        "project_structure": safe_load_json("project_data.json") or {},   # optional
         "dependencies": dependency_data,
         "commit_history": commit_changes,
         "diff_explanations": diff_explanations,
@@ -289,12 +322,13 @@ def build_combined(project_path: str = ".",
             "num_commits": len(commit_changes or [])
         },
 
-        # mermaid diagrams as text (if present)
-        "file_dependency_graph": file_dependency_graph,
-        "function_dependency_graph": function_dependency_graph
+        # NEW: Mermaid diagrams (generated earlier)
+        "file_dependency_graph": file_mermaid,
+        "function_dependency_graph": func_mermaid
     }
 
     return combined
+
 
 
 # ---------- write helper ----------

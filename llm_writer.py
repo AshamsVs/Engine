@@ -107,6 +107,71 @@ Write 2–3 sentences per file.
 Files:
 {files}
 """
+RISK_ANALYSIS_PROMPT = """
+You are an expert software engineering assistant.
+
+You are given structured analysis data for a codebase, including (when available):
+
+- impact_report: which functions/modules affect others, and risk levels
+- function_timeline: how often functions change
+- quality_issues: long functions, deep nesting, TODOs, missing docs
+- unused_functions: dead code candidates
+- duplicate_functions: repeated logic
+- commit_history: patterns of modifications
+- dependency graphs: how modules relate
+
+Using ONLY this context, write a clear **risk analysis** of the system.
+
+Requirements:
+- Start with a 2–3 sentence *overall risk summary* (Low / Medium / High)
+- Then write bullet lists for:
+    - High-risk or high-impact files to be careful with
+    - Historically unstable areas (frequently changed functions)
+    - Code smells that increase maintenance risk
+    - Safe areas suitable for refactoring (unused/duplicate functions)
+- Use simple English
+- Keep total length ~300–400 words
+- Do NOT invent data not present in the context
+
+Context:
+{context}
+"""
+ONBOARDING_PROMPT = """
+Write a simple and friendly developer onboarding guide for this project.
+Explain in clear language:
+- What the AutoDoc engine does at a high level
+- Which files or modules a new developer should read first
+- How the major components fit together (static analysis, dependency graph, commit miner, combine engine, AI layer)
+- What parts of the code are safe to modify
+- What parts require caution due to high coupling or history of changes
+
+Keep it under 3 short paragraphs.
+Use simple English suitable for a student or junior developer.
+
+Context:
+{context}
+"""
+WORKFLOW_PROMPT = """
+Explain the full workflow of the AutoDoc engine in clear, simple steps.
+
+You must explain:
+1. Static analysis of source files
+2. Building file → file dependency graph (imports)
+3. Building function → function call graph
+4. Mining Git commit history and building evolution timeline
+5. Combining all data into the v3 JSON model (unified dataset)
+6. Running the LLM layer to generate AI documentation (abstract, overview, modules, risk, onboarding)
+7. Exporting Markdown, HTML, and PDF
+
+Requirements:
+- Use simple English
+- Write it as a developer-friendly explanation
+- Keep it as 1–2 paragraphs, not too long
+- Do NOT invent details outside the provided context
+
+Context:
+{context}
+"""
 
 RECOMMEND_PROMPT = """
 Write 5 practical recommendations to improve the codebase.
@@ -158,5 +223,11 @@ def generate_sections(combined):
     sections["top_files"] = ask(TOP_FILES_PROMPT)
     sections["file_summaries"] = call_llm(FILE_SUMMARIES_PROMPT.format(files=file_snippets))
     sections["recommendations"] = ask(RECOMMEND_PROMPT)
-
+    sections["risk_analysis"] = ask(RISK_ANALYSIS_PROMPT) 
+    sections["onboarding_guide"] = ask(ONBOARDING_PROMPT)
+    sections["system_workflow"] = ask(WORKFLOW_PROMPT)
+    
     return sections
+    
+
+

@@ -7,10 +7,16 @@ import json
 # ----------------------------
 def get_python_files(folder):
     py_files = []
-    for root, _, files in os.walk(folder):
+    for root, dirs, files in os.walk(folder):
+
+        # EXCLUDE venv, site-packages, build folders, etc.
+        if "venv" in root or "site-packages" in root or "__pycache__" in root:
+            continue
+
         for file in files:
             if file.endswith(".py"):
                 py_files.append(os.path.join(root, file))
+
     return py_files
 
 
